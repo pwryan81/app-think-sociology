@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Custom styles for content formatting not related to jQuery Mobile */
+
+
+.highlightBox {
+	border: 1px solid #47AA42;
+	padding:10px;
+	margin: 10px 0px;
+	background-color:#F1FAF1;
+	border-radius:10px;
+}
+img.main-image {
+	margin-top:-15px;
+	width:100%;
+	display:block
+}
+.submenu {
+	/*background-image:url(img/splash.jpg); */ /* Need to specify this inline, cos each topic is different*/
+	background-position:bottom;
+	background-size:100%;
+	background-repeat:no-repeat;
+}
+h2 {
+	background-color:#333 !important;
+	color:#47AA42;
+	margin:0;
+	padding:10px;
+	text-shadow: 0 1px 0 #000;
+	font-weight:bold;
+	font-size:14px;
+}
