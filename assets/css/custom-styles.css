@@ -12,9 +12,9 @@
 	border-radius:10px;
 }
 img.main-image {
-	margin-top:-15px;
+	/* [disabled]margin-top:-15px; */
 	width:100%;
-	display:block
+	display:block;
 }
 .submenu {
 	/*background-image:url(img/splash.jpg); */ /* Need to specify this inline, cos each topic is different*/
