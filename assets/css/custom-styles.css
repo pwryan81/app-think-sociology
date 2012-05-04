@@ -10,11 +10,19 @@
 	margin: 10px 0px;
 	background-color:#F1FAF1;
 	border-radius:10px;
+	background: #f1faf1;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZmFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1faf1), color-stop(100%, #ffffff));
+	background: -webkit-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
+	background: -o-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
+	background: -ms-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
+	background: linear-gradient(top, #f1faf1 0%, #ffffff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1faf1', endColorstr='#ffffff', GradientType=0 );
 }
 img.main-image {
-	margin-top:-15px;
 	width:100%;
-	display:block
+	display:block;
 }
 .submenu {
 	/*background-image:url(img/splash.jpg); */ /* Need to specify this inline, cos each topic is different*/
@@ -23,11 +31,222 @@ img.main-image {
 	background-repeat:no-repeat;
 }
 h2 {
-	background-color:#333 !important;
-	color:#47AA42;
+	/* font-size:16px; */ /*Removed cos it made the headers in wrap-your-mind too small. Same as text.
+}
+/* CUSTOM OVERRIDES */
+/* The following override the default JQM styles */
+
+.ui-icon-arrow-l {
+	/*background-position: 	-144px 50%;*/
+	/* Override the "left" icon with the "back" icon.*/
+	background-position: 	-396px 50%;
+}
+/* Re-enable word wrapping on list view items */
+.ui-li-desc {
+	white-space: normal;
+}
+.ui-bar-d {
+	text-shadow:none;
+}
+/*
+I disabled these because they were causing the "more" list to overlap its collapsible container. 
+.ui-collapsible-content { padding: 15px 0 15px 8px; }
+.ui-content .ui-collapsible-content .ui-listview { margin:-15px -8px -15px -15px; }
+*/
+
+
+/*
+* THE FOLLOWING CSS IS FROM JQM-DOCS.CSS
+* EDIT AS DESIRED
+*
+*
+*/
+
+/* jqm docs css
+
+Beware: lots of last-minute CSS going on in here 
+cobblers, shoes, 
+*/
+
+body {
+	background: #dddddd;
+}
+.ui-mobile .type-home .ui-content {
+	margin: 0;
+	background: #e5e5e5 url(../images/jqm-sitebg.png) top center repeat-x;
+}
+/*
+.ui-mobile #jqm-homeheader { padding: 40px 10px 0; text-align: center;  margin: 0 auto; }
+.ui-mobile #jqm-homeheader h1 { margin: 0 0 ; }
+.ui-mobile #jqm-homeheader p { margin: .3em 0 0; line-height: 1.3; font-size: .9em; font-weight: bold; color: #666; }
+.ui-mobile #jqm-version { text-indent: -99999px; background: url(../images/version.png) top right no-repeat; width: 119px; height: 122px; overflow: hidden; position: absolute; z-index: 50; top: -11px; right: 0; }
+.ui-mobile .jqm-themeswitcher { margin: 10px 25px 10px 10px;  }
+
+
+p code { font-size:1.2em; font-weight:bold; } 
+h4 code {font-size:1.2em; font-weight:bold; }
+/*
+dt { font-weight: bold; margin: 2em 0 .5em; }
+dt code, dd code { font-size:1.3em; line-height:150%; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+#jqm-homeheader img { width: 235px; }
+img { max-width: 100%; }
+*/
+
+/* fluid images moved from jquery.mobile.core.css*/
+.ui-mobile img {
+	max-width: 100%;
+}
+.type-interior .content-secondary {
+	border-right: 0;
+	border-left: 0;
+	margin: 10px -15px 0;
+	background: #fff;
+	border-top: 1px solid #ccc;
+}
+.type-home .ui-content {
+	margin-top: 5px;
+}
+.type-interior .ui-content {
+	padding-bottom: 0;
+}
+.content-secondary .ui-collapsible {
+	padding: 0 15px 10px;
+}
+.content-secondary .ui-collapsible-content {
+	padding: 0;
+	background: none;
+	border-bottom: none;
+}
+.content-secondary .ui-listview {
+	margin: 0;
+}
+
+
+
+
+
+
+
+/* docs site layout */
+
+@media all and (min-width: 650px) {
+.type-home .ui-content {
+	margin-top: 5px;
+}
+.type-home .ui-content, .type-interior .ui-content {
+	padding: 0;
+	background: url(../images/px-ccc.gif) 50% 0 repeat-y;
+}
+.type-interior .ui-content {
+	background-position: 45%;
+	overflow: hidden;
+}
+.content-secondary {
+	text-align: left;
+	float: left;
+	width: 45%;
+	background: none;
+}
+.content-secondary, .type-interior .content-secondary {
+	margin: 30px 0 20px 2%;
+	padding: 20px 4% 0 0;
+	background: none;
+	border-top: none;
+}
+.type-index .content-secondary {
+	padding: 0;
+}
+.content-secondary .ui-collapsible {
+	margin: 0;
+	padding: 0;
+}
+.content-secondary .ui-collapsible-content {
+	border: none;
+}
+.type-index .content-secondary .ui-listview {
+	margin: 0;
+}
+.ui-mobile #jqm-homeheader {
+	padding: 0;
+}
+.content-primary {
+	width: 45%;
+	float: right;
+	margin-top: 30px;
+	margin-right: 1%;
+	padding-right: 1%;
+}
+.content-primary ul:first-child {
+	margin-top: 0;
+}
+.content-secondary h2 {
+	position: absolute;
+	left: -9999px;
+}
+.type-interior .content-primary {
+	padding: 1.5em 6% 3em 0;
+	margin: 0;
+}
+/* fix up the collapsibles - expanded on desktop */
+	.content-secondary .ui-collapsible-heading {
+	display: none;
+}
+.content-secondary .ui-collapsible-contain {
 	margin:0;
-	padding:10px;
-	text-shadow: 0 1px 0 #000;
-	font-weight:bold;
-	font-size:14px;
+}
+.content-secondary .ui-collapsible-content {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.type-interior .content-secondary .ui-li-divider {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+.type-interior .content-secondary {
+	margin: 0;
+	padding: 0;
+}
+}
+@media all and (min-width: 750px) {
+.type-home .ui-content, .type-interior .ui-content {
+	background-position: 39%;
+}
+.content-secondary {
+	width: 34%;
+}
+.content-primary {
+	width: 56%;
+	padding-right: 1%;
+}
+.type-interior .ui-content {
+	background-position: 34%;
+}
+}
+ @media all and (min-width: 1200px) {
+.type-home .ui-content {
+	background-position: 38.5%;
+}
+.type-interior .ui-content {
+	background-position: 30%;
+}
+.content-secondary {
+	width: 30%;
+	padding-right:6%;
+	margin: 30px 0 20px 5%;
+}
+.type-interior .content-secondary {
+	margin: 0;
+	padding: 0;
+}
+.content-primary {
+	width: 50%;
+	margin-right: 5%;
+	padding-right: 3%;
+}
+.type-interior .content-primary {
+	width: 60%;
+}
 }

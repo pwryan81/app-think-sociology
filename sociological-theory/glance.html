@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>At a glance</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/themes/green.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.mobile.structure.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/custom-styles.css">
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/custom-scripts.js"></script>
+<script src="../assets/js/jquery.mobile.min.js"></script>
+</head>
+
+<body>
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one"  class="type-interior">
+  <div data-role="header" data-theme="b">
+    <h1>At a glance</h1>
+  </div>
+  <!-- /header -->
+  
+  <div data-role="content" >
+    <div class="content-primary">
+      <ul data-role="listview">
+        <li>
+          <h3>The Functionalists</h3>
+          <p>All your favorites from aarkvarks to zebras.</p>
+          <ul>
+            <li><a href="features/herbert-spencer.html">Herbert Spencer</a> </li>
+            <li><a href="features/emile-durkheim.html">Emile Durkheim</a> </li>
+            <li><a href="features/talcott-parsons.html">Talcott Parsons</a> </li>
+            <li><a href="features/robert-merton.html">Robert Merton</a> </li>
+          </ul>
+        </li>
+        <li>
+          <h3>The Conflict Theorists</h3>
+          <p>Fresh colors from the magic rainbow.</p>
+          <ul>
+            <li><a href="features/karl-marx.html">Karl Marx</a></li>
+            <li><a href="features/pierre-bourdieu.html">Pierre Bourdieu</a></li>
+            <li><a href="features/raewyn-connell.html">Raewyn Connell</a></li>
+          </ul>
+        </li>
+        <li>
+          <h3>The Symbolic Interactionists</h3>
+          <p>Everything from cars to planes.</p>
+          <ul>
+            <li><a href="features/herbert-blumer.html">Herbert Blumer</a></li>
+            <li><a href="features/erving-goffman.html">Erving Goffman</a></li>
+            <li><a href="features/howard-becker.html">Howard Becker</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- /content-primary -->
+    <div class="content-secondary">
+      <div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="c">
+        <h3>More in Sociological Theory</h3>
+        <ul data-role="listview" data-dividertheme="c">
+          <li> <a href="get-the-topic.html?">
+            <h3>Get the topic</h3>
+            </a></li>
+          <li> <a href="theory.html" data-prefetch>
+            <h3>Theory</h3>
+            </a> </li>
+          <li> <a href="key-terms.html" data-prefetch>
+            <h3>Key Terms</h3>
+            </a> </li>
+          <li> <a href="wrap-your-mind.html"  data-ajax="false">
+            <h3>Wrap your mind</h3>
+            </a> </li>
+          <li><a href="quiz-questions.html" data-prefetch >
+            <h3>Quiz questions</h3>
+            </a> </li>
+          <li data-role="list-divider">Features</li>
+          <li data-theme="d">
+            <h3>At a glance (You are here)</h3>
+           </li>
+          <li data-theme="a"><a href="../index.html" data-prefetch>
+            <h3>Choose another topic</h3>
+            </a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- /content-secondary --> 
+  </div>
+  <!-- /content -->
+  
+  <div data-role="footer" data-id="myfooter" >
+    <div data-role="navbar">
+      <ul>
+        <li><a href="../index.html" data-role="button" data-transition="none" data-prefetch>Topics</a> </li>
+        <li><a href="../glossary.html"  data-role="button"  data-transition="none">Glossary</a></li>
+        <li><a href="../pages/quiz.html"  data-role="button"  data-transition="none">Quiz</a></li>
+      </ul>
+    </div>
+    <!-- /navbar --> 
+  </div>
+  <!-- /footer --> 
+</div>
+<!-- /page one --> 
+
+<!-- Start of second page: #two -->
+<div data-role="page" id="two" data-theme="a">
+  <div data-role="header">
+    <h1>Two</h1>
+  </div>
+  <!-- /header -->
+  
+  <div data-role="content" data-theme="a">
+    <h2>Two</h2>
+    <p>I have an id of "two" on my page container. I'm the second page container in this multi-page template.</p>
+    <p>Notice that the theme is different for this page because we've added a few <code>data-theme</code> swatch assigments here to show off how flexible it is. You can add any content or widget to these pages, but we're keeping these simple.</p>
+    <p><a href="#one" data-direction="reverse" data-role="button" data-theme="b">Back to page "one"</a></p>
+  </div>
+  <!-- /content -->
+  
+  <div data-role="footer">
+    <h4>Page Footer</h4>
+  </div>
+  <!-- /footer --> 
+</div>
+<!-- /page two --> 
+
+<!-- Start of third page: #popup -->
+<div data-role="page" id="popup">
+  <div data-role="header" data-theme="e">
+    <h1>Dialog</h1>
+  </div>
+  <!-- /header -->
+  
+  <div data-role="content" data-theme="d">
+    <h2>Popup</h2>
+    <p>I have an id of "popup" on my page container and only look like a dialog because the link to me had a <code>data-rel="dialog"</code> attribute which gives me this inset look and a <code>data-transition="pop"</code> attribute to change the transition to pop. Without this, I'd be styled as a normal page.</p>
+    <p><a href="#one" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p>
+  </div>
+  <!-- /content -->
+  
+  <div data-role="footer">
+    <h4>Page Footer</h4>
+  </div>
+  <!-- /footer --> 
+</div>
+<!-- /page popup -->
+
+</body>
+</html>
