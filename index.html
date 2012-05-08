@@ -13,7 +13,7 @@
 </head>
 <body>
 <!-- We don't want a back button on the home page -->
-<div data-role="page" class="type-home" data-theme="a"  data-add-back-btn="false">
+<div data-role="page" class="type-home" data-theme="a"  data-add-back-btn="false" data-dom-cache="true">
   <div data-role="header" > 
     <!-- <h1>Think Sociology</h1>--> 
     <img class="main-image" src="assets/images/banner.jpg" alt="Think Sociology" /> </div>
@@ -199,6 +199,12 @@
               <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
               <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="glossary1.html">Glossary1- removed control group</a></li>
+              <li><a href="glossary2.html">Glossary2 - striped to bare bones</a></li>
+              <li><a href="glossary3.html">Glossary3 A-C</a></li>
+              <li><a href="glossary4.html">Glossary4 D-F</a></li>
+              <li><a href="glossary5.html">Glossary5 G-I</a></li>
+              <li><a href="glossary6.html">Glossary6 J-M</a></li>
             </ul>
           </div>
         </div>
@@ -210,9 +216,9 @@
   <div data-role="footer" data-id="myfooter" >
     <div data-role="navbar">
       <ul>
-        <li><a href="index.html" data-role="button" class="ui-btn-active ui-state-persist">Topics</a> </li>
-        <li><a href="glossary.html"  data-role="button" data-transition="fade" >Glossary</a></li>
-        <li><a href="pages/quiz.html"  data-role="button" data-transition="fade">Quiz</a></li>
+        <li><a href="index.html" data-role="button" class="ui-btn-active ui-state-persist" data-prefetch>Topics</a> </li>
+        <li><a href="glossary.html"  data-role="button" data-transition="slideup" data-prefetch>Glossary</a></li>
+        <li><a href="quiz.html"  data-role="button" data-transition="slideup" data-prefetch>Quiz</a></li>
       </ul>
     </div>
     <!-- /navbar --> 

@@ -1,0 +1,8 @@
+Launcher icons should be 32-bit PNGs with an alpha channel for transparency. The finished launcher icon dimensions corresponding to a given generalized screen density are shown in the table below.
+
+Table 1. Summary of finished launcher icon dimensions for each generalized screen density.
+ldpi (120 dpi) (Low density screen)	36 x 36 px
+mdpi (160 dpi) (Medium density screen)	48 x 48 px
+hdpi (240 dpi) (High density screen)	72 x 72 px
+xhdpi (320 dpi) (Extra-high density screen)  96 x 96 px
+	 	 	 	

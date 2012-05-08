@@ -1,1 +1,0 @@
-A pocket study guide for "Think Sociology", based on jQuery Mobile
