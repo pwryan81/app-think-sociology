@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.pearson.think.sociology"
+	version 	= "0.2.0">
+  <name>Think Sociology</name>
+  <description>A handy pocket reference for "Think Sociology"</description>
+  <author href="http://www.pearson.com.au"
+		email="paul.ryan@pearson.com.au">Paul Ryan</author>
+  <icon src="icon.png" gap:role="default" width="57" height="57"/>
+  <icon src="assets/images/icons/ios/icon.png" width="57" height="57" />
+  <icon src="assets/images/icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+  <icon src="assets/images/icons/ios/icon_at_2x.png" width="114" height="114" />
+  <icon src="assets/images/icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+  <icon src="assets/images/icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+  <icon src="assets/images/icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+  <icon src="assets/images/icons/bb/icon.png" gap:platform="blackberry" />
+  <icon src="assets/images/icons/bb/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
+  <icon src="assets/images/icons/winphone/icon.png" gap:platform="winphone" />
+  <icon src="assets/images/icons/winphone/tileicon.png" gap:platform="winphone" gap:role="background" />
+  <gap:splash src="splash.png" />
+  <gap:splash src="assets/images/splash/ios/Default.png" width="320" height="480" />
+  <gap:splash src="assets/images/splash/ios/Default_at_2x.png" width="640" height="960" />
+  <gap:splash src="assets/images/splash/ios/Default-Landscape.png" width="1024" height="768" />
+  <gap:splash src="assets/images/splash/ios/Default-Portrait.png" width="768" height="1024" />
+  <gap:splash src="assets/images/splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+  <gap:splash src="assets/images/splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+  <gap:splash src="assets/images/splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+  <feature name="http://api.phonegap.com/1.0/file"/>
+  <feature name="http://api.phonegap.com/1.0/network"/>
+  <preference name="orientation" value="portrait" />
+  <preference name="fullscreen" value="true" />
+  <access origin="http://pearsoncmg.com" subdomains="true"  />
+  <access origin="http://pearson.com" subdomains="true"  />
+</widget>

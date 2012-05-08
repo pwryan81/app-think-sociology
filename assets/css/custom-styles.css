@@ -11,8 +11,7 @@
 	background-color:#F1FAF1;
 	border-radius:10px;
 	background: #f1faf1;
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YxZmFmMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-	background: -moz-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
+		background: -moz-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1faf1), color-stop(100%, #ffffff));
 	background: -webkit-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
 	background: -o-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
@@ -24,15 +23,31 @@ img.main-image {
 	width:100%;
 	display:block;
 }
+
+.articleImg {
+	float:left;
+	margin-right: 20px;
+	margin-bottom: 10px;
+	
+	
+}
 .submenu {
 	/*background-image:url(img/splash.jpg); */ /* Need to specify this inline, cos each topic is different*/
 	background-position:bottom;
 	background-size:100%;
 	background-repeat:no-repeat;
 }
-h2 {
-	/* font-size:16px; */ /*Removed cos it made the headers in wrap-your-mind too small. Same as text.
+
+
+#quizmenu img {
+	border:2px solid #666;
+	margin:0 3px 1px 0;
 }
+
+#quizmenu img:hover {
+	border-color:#0C0;
+}
+
 /* CUSTOM OVERRIDES */
 /* The following override the default JQM styles */
 
@@ -42,11 +57,14 @@ h2 {
 	background-position: 	-396px 50%;
 }
 /* Re-enable word wrapping on list view items */
-.ui-li-desc {
+.ui-li, .ui-li-desc {
 	white-space: normal;
 }
 .ui-bar-d {
 	text-shadow:none;
+}
+.ui-collapsible-heading a {
+	/*margin: 0 0 5px 0; */ /* To fix the overlap in the 'more' box, but also adversely affects topics page  */
 }
 /*
 I disabled these because they were causing the "more" list to overlap its collapsible container. 
@@ -75,24 +93,7 @@ body {
 	margin: 0;
 	background: #e5e5e5 url(../images/jqm-sitebg.png) top center repeat-x;
 }
-/*
-.ui-mobile #jqm-homeheader { padding: 40px 10px 0; text-align: center;  margin: 0 auto; }
-.ui-mobile #jqm-homeheader h1 { margin: 0 0 ; }
-.ui-mobile #jqm-homeheader p { margin: .3em 0 0; line-height: 1.3; font-size: .9em; font-weight: bold; color: #666; }
-.ui-mobile #jqm-version { text-indent: -99999px; background: url(../images/version.png) top right no-repeat; width: 119px; height: 122px; overflow: hidden; position: absolute; z-index: 50; top: -11px; right: 0; }
-.ui-mobile .jqm-themeswitcher { margin: 10px 25px 10px 10px;  }
 
-
-p code { font-size:1.2em; font-weight:bold; } 
-h4 code {font-size:1.2em; font-weight:bold; }
-/*
-dt { font-weight: bold; margin: 2em 0 .5em; }
-dt code, dd code { font-size:1.3em; line-height:150%; }
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
-
-#jqm-homeheader img { width: 235px; }
-img { max-width: 100%; }
-*/
 
 /* fluid images moved from jquery.mobile.core.css*/
 .ui-mobile img {

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sociology Theory Quiz</title>
+<link rel="stylesheet" type="text/css" href="../assets/css/themes/green.min.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/jquery.mobile.structure.css">
+<link rel="stylesheet" type="text/css" href="../assets/css/custom-styles.css">
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/custom-scripts.js"></script>
+<script src="../assets/js/jquery.mobile.min.js"></script>
+
+<!-- Quiz stuff needs to go globally -->
+<link rel='stylesheet' href='../assets/css/quiz-styles.css' />
+<script src='quiz-ch2.js'></script>
+<script src='../assets/js/jquery.jquizzy.js'></script>
+</head>
+
+<body>
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
+  <div data-role="header">
+    <h1>Sociology Theory Quiz</h1>
+  </div>
+  <!-- /header -->
+  
+  <div data-role="content" >
+    <div id='quiz-container' class="content-primary"></div>
+  </div>
+  <!-- /content --> 
+  
+  <!-- Fix position so it is not so jumpy when height of question changes -->
+  <div data-role="footer" data-theme="a" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="../index.html" data-role="button" data-transition="slideup" data-prefetch>Topics</a> </li>
+        <li><a href="../glossary.html" data-role="button" data-transition="slideup">Glossary</a></li>
+        <li><a href="../quiz-menu.html" data-role="button" data-transition="slideup"  class="ui-btn-active ui-state-persist" >Quiz</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /footer --> 
+</div>
+<!-- /page one --> 
+
+<script>
+ 
+ $('#quiz-container').jquizzy({
+	 		questions: init.questions, 
+			resultComments: init.resultComments,
+			twitterStatus: 'Woo! I got {score} on Sociological Theory quiz in Think Sociology Try it! http://bit.ly/linky'
+		});
+		
+		
+ </script>
+</body>
+</html>

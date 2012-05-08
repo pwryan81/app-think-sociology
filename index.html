@@ -10,209 +10,241 @@
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/custom-scripts.js"></script>
 <script src="assets/js/jquery.mobile.min.js"></script>
+<!-- PhoneGap Debug -->
+<script src="http://debug.phonegap.com/target/target-script-min.js#thinksociology"></script>
 </head>
 <body>
 <!-- We don't want a back button on the home page -->
-<div data-role="page" class="type-home" data-theme="a"  data-add-back-btn="false">
-  <div data-role="header" > 
+<div data-role="page" class="type-home"   data-add-back-btn="false" data-dom-cache="true">
+  <div data-role="header" data-theme="a"> 
     <!-- <h1>Think Sociology</h1>--> 
     <img class="main-image" src="assets/images/banner.jpg" alt="Think Sociology" /> </div>
-  <div data-role="content">
-    <div class="content-primary" data-theme="a">
+  <div data-role="content" >
+    <div class="content-primary" data-theme="a" >
       <nav>
-        <div data-role="collapsible-set">
-          <div data-role="collapsible" data-collapsed="true" >
+        <ul data-role="listview" data-theme="a">
+          <li>
             <h3>Sociology</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="c">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch01.jpg" width="80" height="80" alt="Sociology">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Sociological Theory</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html"  data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch02.jpg" width="80" height="80" alt="Sociological Theory">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Social Class in Australia</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch03.jpg" width="80" height="80" alt="Social Class in Australia">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Race and Ethnic Stratification</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch04.jpg" width="80" height="80" alt="Race and Ethnic Stratification">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Sex and Gender</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch05.jpg" width="80" height="80" alt="Sex and Gender">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Age and Ageing</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch06.jpg" width="80" height="80" alt="Age and Ageing">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Crime and the Legal System</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch07.jpg" width="80" height="80" alt="Crime and the Legal System">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Education and Employment</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch08.jpg" width="80" height="80" alt="Education and Employment">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Marriage and Family</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch09.jpg" width="80" height="80" alt="Marriage and Family">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>The Body, Health and Illness</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch10.jpg" width="80" height="80" alt="The Body, Health and Illness">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Globalisation</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch11.jpg" width="80" height="80" alt="Globalisation">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Culture</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch12.jpg" width="80" height="80" alt="Culture">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Religion</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch13.jpg" width="80" height="80" alt="Religion">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Environmental Sustainability and Social Movements</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch14.jpg" width="80" height="80" alt="Environmental Sustainability and Social Movements">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
             </ul>
-          </div>
-          <div data-role="collapsible" data-collapsed="true">
+          </li>
+          <li>
             <h3>Sociology Research</h3>
-            <ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="d">
-              <li><a href="sociological-theory/get-the-topic.html">Get the topic</a></li>
-              <li><a href="sociological-theory/theory.html">Theory</a></li>
-              <li><a href="sociological-theory/key-terms.html">Key Terms</a></li>
-              <li><a href="sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
-              <li><a href="sociological-theory/quiz.html">Quiz Questions</a></li>
+            <img src="assets/images/80px/ch15.jpg" width="80" height="80" alt="Sociology Research">
+            <ul data-theme="c">
+              <li><a href="./sociological-theory/get-the-topic.html">Get the topic</a></li>
+              <li><a href="./sociological-theory/theory.html">Theory</a></li>
+              <li><a href="./sociological-theory/key-terms.html">Key Terms</a></li>
+              <li><a href="./sociological-theory/wrap-your-mind.html" data-ajax="false">Wrap your mind</a></li>
+              <li><a href="./sociological-theory/quiz.html">Quiz Questions</a></li>
               <li data-role="list-divider">Features</li>
-              <li><a href="sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="./sociological-theory/glance.html">At a glance</a></li>
+              <li><a href="glossary1.html">1</a></li>
+              <li><a href="glossary2.html">2 </a></li>
+              <li><a href="glossary3.html">3</a></li>
+              <li><a href="glossary4.html">4</a></li>
+              <li><a href="glossary5.html">5</a></li>
+              <li><a href="glossary6.html">6</a></li>
             </ul>
-          </div>
-        </div>
+          </li>
+        </ul>
       </nav>
     </div>
-    <div class="content-secondary"> </div>
+    <div class="content-secondary" data-theme="C">
+      <p><br>
+      <strong>THINK Currency. THINK Issues. THINK Relevancy. THINK Sociology.</strong></p>
+      <p>With an engaging visual design and just 15 chapters, THINK Sociology is the Australian Sociology text your students will want to read. This text thinks their thoughts, speaks their language, grapples with the current-day problems they face, and grounds sociology in real world experiences.</p>
+      <p><em>THINK Sociology </em>is informed with the latest research and the most contemporary examples, allowing you to bring current events directly into your unit with little additional work.</p>
+      <p>The groundbreaking instructor supplements package will help you bring the core concepts of Sociology to life for your students and MySocLab, the text's online learning resource, provides students with a large range of tools to help them achieve a better grade.</p>
+<p><a href="http://www.pearson.com.au/9781442539808" target="_blank">Order hard copy or ebook</a></p>
+      <p><small>&copy; 2011 Pearson Australia</small></p>
+    </div>
   </div>
-  <!-- /content-->
-  <div data-role="footer" data-id="myfooter" >
+  <!-- /content--> 
+  <!-- Fix position of footer on main nav pages. e.g. home -->
+  <div data-role="footer" data-id="myfooter" data-position="fixed" >
     <div data-role="navbar">
       <ul>
         <li><a href="index.html" data-role="button" class="ui-btn-active ui-state-persist">Topics</a> </li>
-        <li><a href="glossary.html"  data-role="button" data-transition="fade" >Glossary</a></li>
-        <li><a href="pages/quiz.html"  data-role="button" data-transition="fade">Quiz</a></li>
+        <li><a href="glossary.html"  data-role="button" data-transition="slideup" >Glossary</a></li>
+        <li><a href="quiz-menu.html"  data-role="button" data-transition="slideup">Quiz</a></li>
       </ul>
     </div>
     <!-- /navbar --> 
