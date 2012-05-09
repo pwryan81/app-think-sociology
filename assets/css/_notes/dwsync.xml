@@ -6,7 +6,11 @@
 <file name="index.html" server="T:/app-think-sociology/" local="129804010664319446" remote="129804010660000000" />
 <file name="jquery.mobile.css" server="T:/app-think-sociology/" local="129804010664369451" remote="129804010660000000" />
 <file name="jquery.mobile.theme.default.css" server="T:/app-think-sociology/" local="129804010664639478" remote="129804010660000000" />
+<<<<<<< HEAD
 <file name="custom-styles.css" server="//TOSHIBA-P750/think/" local="129810227780000000" remote="129810227780000000" />
+=======
+<file name="custom-styles.css" server="//TOSHIBA-P750/think/" local="129809454624360448" remote="129809454620000000" />
+>>>>>>> 1eebf01798d2aa4ade0a7cbc6bc3c2fb6e6d00a9
 <file name="index.html" server="//TOSHIBA-P750/think/" local="129804010660000000" remote="129804010660000000" />
 <file name="jqm-docs.css" server="//TOSHIBA-P750/think/" local="129804174260000000" remote="129804174260000000" />
 <file name="jquery.mobile.css" server="//TOSHIBA-P750/think/" local="129804010660000000" remote="129804010660000000" />
@@ -20,5 +24,8 @@
 <file name="jquery.mobile.theme.default.css" server="C:/Users/Paul/Dropbox/Public/think/" local="129804010660000000" remote="129804010660000000" />
 <file name="jquery.mobile.structure.min.css" server="C:/Users/Paul/Dropbox/Public/think/" local="129808568360000000" remote="129808568360000000" />
 <file name="jquery.mobile.structure.min.css" server="//TOSHIBA-P750/think/" local="129808568360000000" remote="129808568360000000" />
+<<<<<<< HEAD
 <file name="quiz-styles.css" server="//TOSHIBA-P750/think/" local="129810167140000000" remote="129810167140000000" />
+=======
+>>>>>>> 1eebf01798d2aa4ade0a7cbc6bc3c2fb6e6d00a9
 </dwsync>

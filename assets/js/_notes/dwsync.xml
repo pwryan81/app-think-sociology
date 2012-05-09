@@ -6,7 +6,11 @@
 <file name="jquery.js" server="T:/app-think-sociology/" local="129804010250448063" remote="129804010250000000" />
 <file name="jquery.mobile.js" server="T:/app-think-sociology/" local="129804010259248943" remote="129804010250000000" />
 <file name="Note. Minify scripts for production.txt" server="T:/app-think-sociology/" local="129803182605616835" remote="129803182600000000" />
+<<<<<<< HEAD
 <file name="custom-scripts.js" server="//TOSHIBA-P750/think/" local="129810365889290396" remote="129810365880000000" />
+=======
+<file name="custom-scripts.js" server="//TOSHIBA-P750/think/" local="129809403917691143" remote="129809403910000000" />
+>>>>>>> 1eebf01798d2aa4ade0a7cbc6bc3c2fb6e6d00a9
 <file name="jquery.js" server="//TOSHIBA-P750/think/" local="129804010260000000" remote="129804010260000000" />
 <file name="jquery.min.js" server="//TOSHIBA-P750/think/" local="129804840900000000" remote="129804840900000000" />
 <file name="jquery.mobile.js" server="//TOSHIBA-P750/think/" local="129804010260000000" remote="129804010260000000" />
