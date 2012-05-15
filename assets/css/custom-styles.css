@@ -3,68 +3,90 @@
 
 /* Custom styles for content formatting not related to jQuery Mobile */
 
-
-.highlightBox {
-	border: 1px solid #47AA42;
-	padding:10px;
-	margin: 10px 0px;
-	background-color:#F1FAF1;
-	border-radius:10px;
-	background: #f1faf1;
-		background: -moz-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f1faf1), color-stop(100%, #ffffff));
-	background: -webkit-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
-	background: -o-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
-	background: -ms-linear-gradient(top, #f1faf1 0%, #ffffff 100%);
-	background: linear-gradient(top, #f1faf1 0%, #ffffff 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1faf1', endColorstr='#ffffff', GradientType=0 );
+h2 {
+	background-color:#333333;
+	color: #FFFFFF;
+	padding: 10px 20px;
+	margin:0 0 10px 0;
+	font-size:16px;
 }
-img.main-image {
-	width:100%;
-	display:block;
+p {
+	font-size:14px;
+	line-height: 22px;	
+	margin:15px;
 }
 
+
+.banner {
+	text-align:center;
+	max-height:150px;
+}
+.banner img {
+	max-width:100%;
+}
+.splashImage {
+	max-width:100%;
+}
+li a img {
+	border: 1px solid #666;
+}
+/* Green box as seen on Get The Topic pages */
+.featureBox {
+	border:1px solid #7FA23E;
+	padding: 10px;
+	margin: 10px;
+}
 .articleImg {
 	float:left;
 	margin-right: 20px;
 	margin-bottom: 10px;
-	
-	
 }
-.submenu {
-	/*background-image:url(img/splash.jpg); */ /* Need to specify this inline, cos each topic is different*/
-	background-position:bottom;
-	background-size:100%;
-	background-repeat:no-repeat;
-}
-
-
 #quizmenu img {
 	border:2px solid #666;
 	margin:0 3px 1px 0;
 }
-
 #quizmenu img:hover {
 	border-color:#0C0;
 }
 
-/* CUSTOM OVERRIDES */
-/* The following override the default JQM styles */
 
-.ui-icon-arrow-l {
-	/*background-position: 	-144px 50%;*/
-	/* Override the "left" icon with the "back" icon.*/
-	background-position: 	-396px 50%;
+
+/* JQM STRUCTURE overrides */
+/* If overriding default strucutre, leave comment to why */
+.ui-content {
+	overflow:hidden; /* Avoid double scrollbar in fullscreen view */
+	/*padding: 0; /* Override default 15px from Structure.css. Update. Had to remove cos it caused nested list to overlap with the header*/
 }
+
+.ui-header .ui-title, .ui-footer .ui-title {
+margin: .6em 20% .8em;
+}
+
+.content-primary div ul li {
+	padding-bottom: 10px;
+	font-size:14x;
+}
+
+.ui-collapsible-heading, .ui-collapsible-content {
+	margin: 4px 10px; /* PR: Removed because it causes the More.. collapsible header to be too narrow compared to the content */
+}
+
+
+
+/* CUSTOM JQM THEMEROLLER OVERRIDES */
+/* The following override the default JQM styles */
+/* Please add comments why they are being extended or overriden */
+
+
 /* Re-enable word wrapping on list view items */
 .ui-li, .ui-li-desc {
 	white-space: normal;
 }
-.ui-bar-d {
-	text-shadow:none;
-}
 .ui-collapsible-heading a {
-	/*margin: 0 0 5px 0; */ /* To fix the overlap in the 'more' box, but also adversely affects topics page  */
+/*margin: 0 0 5px 0; */ /* To fix the overlap in the 'more' box, but also adversely affects topics page  */
+}
+.ui-body {
+	margin-bottom:20px; /* When stying inset divs with a particular background */
 }
 /*
 I disabled these because they were causing the "more" list to overlap its collapsible container. 
@@ -72,12 +94,17 @@ I disabled these because they were causing the "more" list to overlap its collap
 .ui-content .ui-collapsible-content .ui-listview { margin:-15px -8px -15px -15px; }
 */
 
-
+::selection {
+	background:#7FA23E;
+	color:#FFF; /* Safari and Opera */
+}
+::-moz-selection {
+background:#7FA23E;
+color:#FFF; /* Firefox */
+}
 /*
 * THE FOLLOWING CSS IS FROM JQM-DOCS.CSS
 * EDIT AS DESIRED
-*
-*
 */
 
 /* jqm docs css
@@ -93,8 +120,6 @@ body {
 	margin: 0;
 	background: #e5e5e5 url(../images/jqm-sitebg.png) top center repeat-x;
 }
-
-
 /* fluid images moved from jquery.mobile.core.css*/
 .ui-mobile img {
 	max-width: 100%;
@@ -133,6 +158,7 @@ body {
 /* docs site layout */
 
 @media all and (min-width: 650px) {
+	
 .type-home .ui-content {
 	margin-top: 5px;
 }
@@ -169,15 +195,14 @@ body {
 .type-index .content-secondary .ui-listview {
 	margin: 0;
 }
-.ui-mobile #jqm-homeheader {
-	padding: 0;
-}
+
 .content-primary {
 	width: 45%;
 	float: right;
 	margin-top: 30px;
 	margin-right: 1%;
-	padding-right: 1%;
+	/* padding-right: 1%; */
+	
 }
 .content-primary ul:first-child {
 	margin-top: 0;
@@ -187,7 +212,7 @@ body {
 	left: -9999px;
 }
 .type-interior .content-primary {
-	padding: 1.5em 6% 3em 0;
+	/*padding: 1.5em 6% 3em 0;*/
 	margin: 0;
 }
 /* fix up the collapsibles - expanded on desktop */
@@ -203,8 +228,8 @@ body {
 	padding: 0;
 }
 .type-interior .content-secondary .ui-li-divider {
-	padding-top: 1em;
-	padding-bottom: 1em;
+/*padding-top: 1em;
+	padding-bottom: 1em;*/
 }
 .type-interior .content-secondary {
 	margin: 0;
@@ -212,6 +237,7 @@ body {
 }
 }
 @media all and (min-width: 750px) {
+	
 .type-home .ui-content, .type-interior .ui-content {
 	background-position: 39%;
 }
@@ -251,3 +277,4 @@ body {
 	width: 60%;
 }
 }
+

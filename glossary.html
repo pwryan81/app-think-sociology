@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glossary</title>
 <link rel="stylesheet" type="text/css" href="assets/css/themes/green.min.css" />
@@ -14,15 +15,14 @@
 <body>
 <!-- Don't cache the glossary. Too big -->
 <div data-role="page" id="glossary" class="type-interior">
-  <div data-role="header"  data-theme="b"> 
+  <div data-role="header"  data-theme="a"> 
     <!-- Add home button here because the glossary can be really long, hard to scroll down to bottom footer --> 
-    <a href="index.html" data-icon="home" class="ui-btn-right" data-iconpos="notext">Topics</a>
+    <!--<a href="index.html" data-icon="home" class="ui-btn-right" data-iconpos="notext">Home</a>-->
     <h1>Glossary</h1> 
-    
-    
-    <select id="glossary-filter" data-mini="true">
-      <option value=''>Filter glossary</option>
-      <option value=''>All</option>
+    <a href="index.html" data-icon="home" data-direction="reverse">Home</a> 
+
+    <select id="glossary-filter" data-mini="true" class="ui-btn-right" data-theme="b">
+      <option value=''>A-Z</option>
       <option value='[A]'>A</option>
       <option value='[B]'>B</option>
       <option value='[C]'>C</option>
@@ -55,7 +55,7 @@
   
   <div data-role="content">
     <div class="content-primary" data-inset="false">
-      <ul data-role="listview" class="ui-listview" data-filter="true" data-filter-placeholder="Filter Glossary..."  data-filter-theme="b" data-split-icon="arrow-u" >
+      <ul data-role="listview" class="ui-listview" data-filter="true" data-filter-placeholder="Filter Glossary..."  data-filter-theme="c" data-split-icon="arrow-u" >
         <li data-theme="b"><a>A</a><a rel="top">Top</a></li>
         <li data-filtertext='[A] absolute poverty'>
           <h3>absolute poverty</h3>
@@ -1360,12 +1360,12 @@
   </div>
   <!--/content-primary --> 
   <!-- Removed: data-position="fixed"-->
-  <div data-role="footer" data-id="myfooter" >
+  <div data-role="footer" data-id="myfooter" data-position="fixed" >
     <div data-role="navbar">
       <ul>
-        <li><a href="index.html" data-role="button"  data-transition="fade" data-prefetch>Topics</a></li>
+        <li><a href="index.html" data-role="button"  data-transition="slide" data-direction="reverse" data-prefetch>Home</a></li>
         <li><a href="glossary.html"  data-role="button"  class="ui-btn-active ui-state-persist" >Glossary</a></li>
-        <li><a href="quiz-menu.html"  data-role="button" data-transition="fade">Quiz</a></li>
+        <li><a href="quiz-menu.html"  data-role="button" data-transition="slide" data-prefetch>Quiz</a></li>
       </ul>
     </div>
     <!-- /navbar --> 

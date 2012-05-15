@@ -14,9 +14,9 @@
         var defaults = {
             questions: null,
             twitterStatus: 'I scored {score}% on this awesome! Check it out!',
-            startText: '',
+            startText: 'Let\'s get started!',
             endText: 'Finished!',
-            //splashImage: '../assets/images/quiz/start.png',
+            splashImage: '../assets/images/quiz/start-quiz.png',
             twitterImage: '../images/quiz/share.png',
 
             twitterUsername: 'jQuizzy',
@@ -41,14 +41,14 @@
 
         var superContainer = $(this),
             answers = [],
-            introFob = '	<div class="intro-container slide-container"><div class="question-number">' + config.startText + '</div><a class="nav-start" href="#">Start</a></div>	',
+   			 introFob = '	<div class="intro-container slide-container"><div class="question-number">'+config.startText+'</div><a class="nav-start" href="#" data-role="button" data-inline="true" data-icon="star" data-theme="b">Start Quiz</a></div>',
             exitFob = '<div class="results-container slide-container"><div class="question-number">' + config.endText + '</div><div class="result-keeper"></div></div><div class="notice">Please select an option</div><div class="progress-keeper" ><div class="progress"></div></div>',
             contentFob = '';
         superContainer.addClass('main-quiz-holder');
 
         for (questionsIteratorIndex = 0; questionsIteratorIndex < config.questions.length; questionsIteratorIndex++)
         {
-            contentFob += '<div class="slide-container"><div class="question-number">' + (questionsIteratorIndex + 1) + '/' + config.questions.length + '</div><div class="question">' + config.questions[questionsIteratorIndex].question + '</div><ul class="answers">';
+            contentFob += '<div class="slide-container"><div class="question-number">Question ' + (questionsIteratorIndex + 1) + ' of ' + config.questions.length + '</div><div class="question">' + config.questions[questionsIteratorIndex].question + '</div><ul class="answers">';
             for (answersIteratorIndex = 0; answersIteratorIndex < config.questions[questionsIteratorIndex].answers.length; answersIteratorIndex++)
             {
                 contentFob += '<li>' + config.questions[questionsIteratorIndex].answers[answersIteratorIndex] + '</li>';
@@ -58,16 +58,18 @@
 
             if (questionsIteratorIndex !== 0)
             {
-                contentFob += '<div class="prev"><a class="nav-previous" href="#">Prev</a></div>';
+                contentFob += '<div class="prev"><a class="nav-previous" href="#" data-role="button" data-inline="true" data-icon="arrow-l" data-theme="b">Previous</a></div>';
             }
 
             if (questionsIteratorIndex < config.questions.length - 1)
             {
-                contentFob += '<div class="next"><a class="nav-next" href="#">Next</a></div>';
+                contentFob += '<div class="next"><a class="nav-next" href="#" data-role="button" data-inline="true" data-icon="arrow-r" data-theme="b">Next</a></div>';
+			  // contentFob += '<div class="next"><a href="#" class="nav-next ui-btn ui-btn-inline ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-b"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Next</span><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></span></a></div>';
+			   
             }
             else
             {
-                contentFob += '<div class="next final"><a class="nav-show-result" href="#">Finish</a></div>';
+                contentFob += '<div class="next final"><a class="nav-show-result" href="#" data-role="button" data-inline="true" data-icon="check" data-theme="b">Finish</a></div>';
             }
 
             contentFob += '</div></div>';
@@ -124,7 +126,7 @@
 
         progressKeeper.hide();
         notice.hide();
-        slidesList.hide().first().fadeIn(100);
+        slidesList.hide().first().fadeIn(300);
 
         superContainer.find('li').click(function ()
         {
@@ -144,10 +146,10 @@
         superContainer.find('.nav-start').click(function ()
         {
 
-            $(this).parents('.slide-container').fadeOut(100, function ()
+            $(this).parents('.slide-container').fadeOut(300, function ()
             {
-                $(this).next().fadeIn(100);
-                progressKeeper.fadeIn(100);
+                $(this).next().fadeIn(300);
+                progressKeeper.fadeIn(1000);
             });
             return false;
 
@@ -163,29 +165,29 @@
             }
 
             notice.hide();
-            $(this).parents('.slide-container').fadeOut(100, function ()
+            $(this).parents('.slide-container').fadeOut(300, function ()
             {
-                $(this).next().fadeIn(100);
+                $(this).next().fadeIn(300);
             });
             progress.animate(
             {
                 width: progress.width() + Math.round(progressWidth / questionLength)
-            }, 100);
+            }, 1000);
             return false;
         });
 
         superContainer.find('.prev').click(function ()
         {
             notice.hide();
-            $(this).parents('.slide-container').fadeOut(100, function ()
+            $(this).parents('.slide-container').fadeOut(300, function ()
             {
-                $(this).prev().fadeIn(100);
+                $(this).prev().fadeIn(300);
             });
 
             progress.animate(
             {
                 width: progress.width() - Math.round(progressWidth / questionLength)
-            }, 100);
+            }, 300);
             return false;
         });
 
@@ -235,11 +237,11 @@
 
             }
             score = roundReloaded(trueCount / questionLength * 100, 2);
-            shareButton = '<a href="http://twitter.com/share?text=' + config.twitterStatus.replace("{score}", score) + '&via=' + config.twitterUsername + '" class="share-button">Share on Twitter</a>';
+            //shareButton = '<a href="http://twitter.com/share?text=' + config.twitterStatus.replace("{score}", score) + '&via=' + config.twitterUsername + '" class="share-button">Share on Twitter</a>';
 
 
-            resultSet = '<h2 class="qTitle">' + judgeSkills(score) + ' You scored ' + score + '%</h2>' + shareButton + resultSet + '<div class="jquizzy-clear"></div>';
-            superContainer.find('.result-keeper').html(resultSet).show(100);
+            resultSet = '<h3 class="featureBox">' + judgeSkills(score) + ' You scored ' + score + '%</h3>' + shareButton + resultSet + '<div class="jquizzy-clear"></div>';
+            superContainer.find('.result-keeper').html(resultSet).show(300);
             superContainer.find('.resultsview-qhover').hide();
             superContainer.find('.result-row').hover(function ()
             {
@@ -248,9 +250,9 @@
             {
                 $(this).find('.resultsview-qhover').hide();
             });
-            $(this).parents('.slide-container').fadeOut(100, function ()
+            $(this).parents('.slide-container').fadeOut(300, function ()
             {
-                $(this).next().fadeIn(100);
+                $(this).next().fadeIn(300);
             });
             return false;
         });

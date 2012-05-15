@@ -3,7 +3,7 @@
        {
            "question": "Survival of the fittest describes __________.",
            "answers": [
-		   "social Darwinism",
+		   "social Darwinism *",
 		   "common sense theory",
 		   "functionalism",
 		   "post-structuralist theory"],
@@ -15,23 +15,23 @@
 		   "manifest functions",
 		   "latent functions",
 		   "a series of paradigms",
-		   "a system of interrelated parts"],
+		   "a system of interrelated parts *"],
 			  "correctAnswer": 4
        },
 		 {
            "question": "The framework that views society as being in a constant struggle over scarce resources is called ______.",
            "answers": [
 		   "functionalism",
-		   "conflict theory",
+		   "conflict theory *",
 		   "symbolic interactionism",
-		   "social statics?"],
+		   "social statics"],
 			  "correctAnswer": 2
        },
 	    {
            "question": "______ is primarily a micro approach because it is concerned with the individual's role in creating society.",
            "answers": [
 		   "Conflict theory",
-		   "Symbolic interactionism",
+		   "Symbolic interactionism *",
 		   "Integration",
 		   "Social exchange theory"],
 			  "correctAnswer": 2
@@ -40,12 +40,12 @@
      ],
 	  "resultComments" :  
 	  {
-		    perfect: "A master of Socialogical Theory.",
-			 excellent: "Outstanding knowledge on Socialogical Theory!",
-			 good: "Exceeds expectations!",
+		    perfect: "You've mastered Sociological Theory!",
+			 excellent: "Outstanding knowledge on Sociological Theory!",
+			 good: "Very good!",
 			 average: "Acceptable.",
-			 bad: "Well, that was poor.",
-			 poor: "Perhaps you need to actually buy the textbook from MyPearsonStore!",
+			 bad: "Well, that was disappointing.",
+			 poor: "Random clicking won't get you far.",
 			 worst: "Fail!"
 	  }
 

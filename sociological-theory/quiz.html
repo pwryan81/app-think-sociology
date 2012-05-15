@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sociology Theory Quiz</title>
 <link rel="stylesheet" type="text/css" href="../assets/css/themes/green.min.css">
@@ -10,50 +11,80 @@
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/custom-scripts.js"></script>
 <script src="../assets/js/jquery.mobile.min.js"></script>
-
-<!-- Quiz stuff needs to go globally -->
-<link rel='stylesheet' href='../assets/css/quiz-styles.css' />
-<script src='quiz-ch2.js'></script>
-<script src='../assets/js/jquery.jquizzy.js'></script>
 </head>
 
 <body>
 
 <!-- Start of first page: #one -->
-<div data-role="page" id="one">
-  <div data-role="header">
-    <h1>Sociology Theory Quiz</h1>
-  </div>
+<div data-role="page" class="type-interior"> 
+  <!-- Quiz JS and CSS needs to go inside  the page container.  -->
+  <link rel='stylesheet' href='../assets/css/quiz-styles.css' />
+  <script src='quiz-ch2.js'></script> 
+  <script src='../assets/js/jquery.jquizzy.js'></script>
+  <div data-role="header" data-theme="b">
+    <h1> Quiz</h1>
+    <a href="menu.html" data-icon="arrow-l"  data-direction="reverse">Back</a> </div>
   <!-- /header -->
   
-  <div data-role="content" >
-    <div id='quiz-container' class="content-primary"></div>
+  <div data-role="content">
+    <div class="content-primary">
+   
+      <div id='quiz-container'> </div>
+    </div>
+    <div class="content-secondary">
+      <div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="c"> 
+        <!-- <h3>More in Sociological Theory</h3> -->
+        <ul data-role="listview" data-theme="c" data-dividertheme="a">
+          <li> <a href="get-the-topic.html" data-prefetch>
+            <h3>Get the topic</h3>
+            </a></li>
+          <li> <a href="theory.html" data-prefetch>
+            <h3>Theory</h3>
+            </a> </li>
+          <li> <a href="key-terms.html" data-prefetch>
+            <h3>Key terms</h3>
+          </a> </li>
+          <li> <a href="wrap-your-mind.html" data-ajax="false">
+            <h3>Wrap your mind</h3>
+            </a> </li>
+          <li data-theme="b"> <h3>Quiz questions</h3>
+             </li>
+          <li data-role="list-divider">Features</li>
+          <li><a href="glance.html" data-prefetch>
+            <h3>At a glance</h3>
+            </a></li>
+          <!-- <li data-theme="a" data-icon="false"><a href="../index.html" data-transition="slide" data-direction="reverse">
+            <h3>&lt; Choose another topic</h3>
+            </a></li> -->
+        </ul>
+      </div>
+    </div>
+    <!-- /content-secondary --> 
   </div>
   <!-- /content --> 
   
   <!-- Fix position so it is not so jumpy when height of question changes -->
-  <div data-role="footer" data-theme="a" data-position="fixed">
+  <!-- Perhaps hide the footer nav in the quiz to discourage cheating. Also seems to break on iPad. -->
+  <div data-role="footer" data-id="myfooter"  data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="../index.html" data-role="button" data-transition="slideup" data-prefetch>Topics</a> </li>
+        <li><a href="../index.html" data-role="button" data-transition="slideup">Home</a> </li>
         <li><a href="../glossary.html" data-role="button" data-transition="slideup">Glossary</a></li>
-        <li><a href="../quiz-menu.html" data-role="button" data-transition="slideup"  class="ui-btn-active ui-state-persist" >Quiz</a></li>
+        <li><a href="../quiz-menu.html"  data-role="button"  data-transition="slideup">Quiz</a></li>
       </ul>
     </div>
   </div>
   <!-- /footer --> 
-</div>
-<!-- /page one --> 
-
-<script>
- 
+  <script>
  $('#quiz-container').jquizzy({
 	 		questions: init.questions, 
 			resultComments: init.resultComments,
 			twitterStatus: 'Woo! I got {score} on Sociological Theory quiz in Think Sociology Try it! http://bit.ly/linky'
 		});
-		
-		
  </script>
+</div>
+<!-- /page one --> 
+
+
 </body>
 </html>

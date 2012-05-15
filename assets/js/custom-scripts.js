@@ -7,19 +7,22 @@
 /* http://jquerymobile.com/demos/1.1.0/docs/pages/phonegap.html */
 
 $(document).bind("mobileinit", function () {
-    //apply overrides here
+    
+	
+	//AJAX related config
+	//$.mobile.pushStateEnabled = true;
     //$.mobile.ajaxEnabled = false;
     //$.mobile.allowCrossDomainPages = true;
     //$.mobile.defaultDialogTransition = 'pop';
-     $.mobile.defaultPageTransition = 'none';  //none is best for mobile, cos transition is not too smooth.
-    //$.mobile.defaultPageTransition = 'fade';  // Fade is best for desktop
+    // $.mobile.defaultPageTransition = 'slide';  //none is best for mobile, cos transition is not too smooth.
+    $.mobile.defaultPageTransition = 'none';  // Fade is best, because slide doesn't know the best direction to slide unless specified.
 
     //Set the delay for touch devices to add the hover and down classes on touch interactions for buttons throughout the framework. Reducing the delay here results in a more responsive feeling ui, but will often result in the downstate being applied during page scrolling.
     $.mobile.buttonMarkup.hoverDelay = 0;
 
     // Navigation
     $.mobile.page.prototype.options.backBtnText = "Back";
-    $.mobile.page.prototype.options.addBackBtn = true;
+    $.mobile.page.prototype.options.addBackBtn = true; // Leave this as true, so it will add a back button if none is specified. Does not add button if explictly set on page header.
     $.mobile.page.prototype.options.backBtnTheme = "b";
 
     $.mobile.loadingMessage = "Thinking..."
@@ -50,6 +53,8 @@ $(document).bind("mobileinit", function () {
 
 });
 
+
+/* Glossary filtering */
 $(document).delegate("#glossary", "pageinit", function () {
 	//	alert('Glossary inited');
 	
@@ -61,33 +66,47 @@ $(document).delegate("#glossary", "pageinit", function () {
 	
 });
 
-$(document).delegate("#key-terms", "pageinit", function () {
-    //alert('A page with an ID of "key-terms" was just created by jQuery Mobile!');
-    /* Function to expand all or collapse all collabsibles when radio button toggled*/
 
-    //$("#collapsibleGroup input[type='radio']").bind( "change", function(event, ui) {
-    $("#collapsibleGroup input[type='radio']").live("change", function (event, ui) {
-        //alert("toggle to " + this.value );
-        $('.ui-collapsible').trigger(this.value);
-    });
-});
-
-
-
+/* Reusable functions on any page */
 $(document).bind("pageinit", function () {
 
     // Function to scroll to top
     $("a[rel='top']").click(function () {
-
-        //$("body").scrollTop(0);
         $.mobile.silentScroll(0);
     });
+	
+	// Function to toggle all collapsible elements on the page
+	/*$("#collapsibleToggle input[type='radio']").bind("change", function (event, ui) {
+        $('#collapsibleGroup .ui-collapsible').trigger(this.value);
+    });	*/
+	
+	
 
 });
 
 
-// Orientation - Doesn't seem to work
-$(document).bind("orientationchange", function () {
-    alert("orientation changed");
-    alert(event.orientation);
+// Orientation change - Works on iPad
+$(document).bind("orientationchange", function () {    
+    //alert(event.orientation);
 });
+
+
+
+
+/* Device Detection */
+/*
+ var deviceAgent = navigator.userAgent.toLowerCase();
+ var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
+ if(agentID.indexOf("iphone")>=0){
+  //alert("iphone");
+ }
+ if(agentID.indexOf("ipod")>=0){
+  //alert("ipod");
+ }
+ if(agentID.indexOf("ipad")>=0){
+  //alert("ipad");
+ }
+ if(agentID.indexOf("android")>=0){
+  //alert("android");
+ }
+ */

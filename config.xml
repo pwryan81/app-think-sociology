@@ -2,7 +2,7 @@
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	id		= "com.pearson.think.sociology"
-	version 	= "0.2.7">
+	version 	= "0.3.0">
   <name>Think Sociology</name>
   <description>A pocket reference for "Think Sociology", 1st edition. Published by Pearson Australia. (C) 2011-2012 </description>
   <author href="http://www.pearson.com.au"

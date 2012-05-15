@@ -7,64 +7,61 @@
  * --------------------------------------------------------------------
 **/
 
+.ui-content {
+/*overflow:visible !important;*/ /* So the results view on hover is not cropped off by the content container. UPDATE: Do not use this style because it causes a serious bug in the footer display on iPad 1 */
+}
+/* All this needs to be cleaned up! */
+
 .main-quiz-holder {
 	margin: 0 auto;
 	position: relative;
-	background: #FCFCFC;
-	border:1px solid #dedede;
-	/*box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 -o-box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 -webkit-box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 -moz-box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 border-radius: 20px 2px 20px 2px;*/
-	 position: relative;/*width: 600px;*/
+	position: relative;/*width: 600px;*/
+	min-height:450px;/*border:1px solid #7FA23E;*/
+	/*padding: 10px;
+	margin: 10px; */
 }
 /* Low Orbit Ion Cannon! */
 
 .main-quiz-holder * {
+/*
 	margin: 0;
-	padding: 0;/*font-family:  "font-family:Verdana ", sans-serif;*/
+	padding: 0;
+	*/
 }
-/* Ok, prefix every rule with the main class since the default Tuts+ stylesheet overrides a lot of the styles here. Adding more weight to keep things in check. Ugly, but it'll do */
-
-
 .main-quiz-holder a {
-	text-decoration: none;
-	color: #6C6C6C;
+	text-decoration: none;/*color: #6C6C6C; */ /*PR: Disabled cos it causes button text to be grey not white */
 }
 .main-quiz-holder .slide-container {
-	min-width:320px;
-	max-width: 480px;
-	/* padding: 20px 50px 50pt 50px;*/
+	min-width:300px;
+	/*max-width: 460px;*/
 	 padding-bottom: 50pt;
 }
 .results-container, .intro-container {
-	text-align: center;
+/*text-align: center; */ /* Was causing the subheading to be centered, when left align is required */
 }
 .results-container {
 }
 .main-quiz-holder .slide-container .question, .main-quiz-holder h2.qTitle {
 	margin: 10px 0 20px 0;
-	/*font-size: 26px;*/
-	 font-weight: normal;
+	font-weight: normal;
 }
 .main-quiz-holder h2.qTitle {
-	/*font-size: 32px;*/
 	margin-top: 30px;
 }
 .main-quiz-holder .question-number {
-	position: absolute;
+	/*position: absolute;
 	right: 10px;
-	top: 10px;
-	border:1px solid #F6F6F6;
+	top: 10px;*/
+	/*border:1px solid #F6F6F6;
 	padding: 5px;
 	background: #F0F0F0;
-	/*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);*/
-  border-radius: 3px;
-	color: #949494;
+	color: #949494;*/
+	background-color:#333333;
+	color: #FFFFFF;
+	padding: 10px 20px;
+	margin:0 0 10px 0;
+	font-size:16px;
+	font-weight:bold;
 }
 .main-quiz-holder .slide-container ul.answers {
 	margin: 0px;
@@ -76,104 +73,103 @@
 	padding: 5px 30px;
 	margin: 12px 0;
 	color: #4c4c4c;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	border-radius: 4px;
-	/*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);*/
-  background: #f6f6f6;
+	background: #f6f6f6;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d4d4d4));
 	background: -webkit-linear-gradient(#f6f6f6, #d4d4d4);
 	background-image: -moz-linear-gradient(top, #f6f6f6, #d4d4d4);
 	background-image: -moz-gradient(top, #f6f6f6, #d4d4d4);
 	border: 1px solid #a1a1a1;
 }
+.main-quiz-holder .slide-container ul.answers li:hover {
+	background: #CBE59D;
+	border-color: #7fa23e;
+}
+/* Selected answer */
 .main-quiz-holder .slide-container ul.answers li.selected {
-	background: #6fb2e5;/*  box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
-   -o-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
-   -webkit-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
-   -moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;*/
+	background: #7fa23e;
+	border-color: #576f2a;
+	color: #FFF;
 }
 .main-quiz-holder .slide-container .prev, .main-quiz-holder .slide-container .next {
-	height: 19px;
+/*height: 19px;
 	cursor: pointer;
 	padding: 5px 10px;
 	font-size: 16px;
 	padding: 5px 15px;
-	color: #4c4c4c;
-	border-radius: 4px;
-	/*text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);*/
-  background: #6fb2e5;/*  box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
-   -o-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
-   -webkit-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;
-   -moz-box-shadow: 0 1px 5px #0061aa, inset 0 10px 20px #b6f9ff;*/
+	color: #FFFFFF;
+	border-radius: 0px;
+   background: #7fa23e;*/
   
 }
 .main-quiz-holder .slide-container .next {
-	background: #77d125;/* box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;
-   -o-box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;
-   -webkit-box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;
-   -moz-box-shadow: 0 1px 5px #3caa00, inset 0 10px 20px #c9ffb6;*/
+/*
+	background: #7fa23e;
+	color: #FFF;
+	*/
+}
+.main-quiz-holder .slide-container .next a, main-quiz-holder .slide-container .prev a {
+	color: #FFF;
 }
 .main-quiz-holder .progress-keeper {
-	/* width: 553px;*/
-    margin: 0px 12px;
-	/* box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 -o-box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 -webkit-box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 -moz-box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;*/
-	 border-radius: 2px;
+	width: 400px;
+	margin: 0px 12px;
 	border:1px solid #dedede;
 	margin: 0px auto 20px auto;
+	background-color: #EEE;
 }
 .main-quiz-holder .progress {
 	width: 0;
 	height: 20px;
 	color: #4c4c4c;
-	background: #f6f6f6;
-	background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#d4d4d4));
-	background: -webkit-linear-gradient(#f6f6f6, #d4d4d4);
-	background-image: -moz-linear-gradient(top, #f6f6f6, #d4d4d4);
-	background-image: -moz-gradient(top, #f6f6f6, #d4d4d4);
+	background: #6E8C36;
+	background: -webkit-gradient(linear, left top, left bottom, from(#8CB441), to(#6E8C36 ));
+	background: -webkit-linear-gradient(#8CB441, #6E8C36 );
+	background:url(../images/progressbar.png) repeat-x;
 }
 .main-quiz-holder .result-keeper {
 	margin: 10px;
 	text-align: center;
 }
+/* Text: "Please select an option" */
 .main-quiz-holder .notice {
 	margin-top: -30px;
 	color: #717171;
-	position: absolute;
+	/*position: absolute;*/
 	right: 52px;
 	bottom: 75px;
 }
 .main-quiz-holder .slide-container .prev {
-	width:55px;
+	/*width:55px;*/
 	float: left;
 }
 .main-quiz-holder .slide-container .next, .main-quiz-holder .slide-container .final {
-	width:55px;
+	/*width:55px;*/
 	float: right;
 }
 .main-quiz-holder .slide-container .final {
-	width: 65px;
+	/*width: 65px;*/
 }
 .main-quiz-holder .nav-previous {
+/*
+	color: #FFF;
 	padding-left: 25px;
 	background: url(../images/quiz/back.png) left no-repeat;
+	*/
 }
 .main-quiz-holder .nav-next {
+/*
 	padding-right: 25px;
 	background: url(../images/quiz/forward.png) right no-repeat;
+	*/
 }
 .main-quiz-holder .nav-show-result {
+/*
 	padding-left: 25px;
-	background: url(../images/quiz/confirm.png) left no-repeat;
+	background: url(../images/quiz/confirm.png) left no-repeat;*/
 }
 .main-quiz-holder .nav-start {
-	display: block;
+	display: block;   /*PR */
+	width: 150px;
 	margin: 40px auto 0 auto;
 }
 .main-quiz-holder .nav-container {
@@ -185,16 +181,11 @@
 	margin: 10px 25px;
 	float: left;
 	position: relative;
-	margin: 2px solid #000;
+	font-size:14px;
 }
 .main-quiz-holder .result-row .resultsview-qhover {
 	background: #FCFCFC;
 	border:1px solid #dedede;
-	/*box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 -o-box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 -webkit-box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;
-	 -moz-box-shadow:0 1px 5px #D9D9D9,inset 0 10px 20px #F1F1F1;*/
-	 border-radius: 10px;
 	position: absolute;
 	width: 250px;
 	top: 43px;
@@ -212,10 +203,8 @@
 	padding: 0 28px;
 	margin: 5px 0;
 	min-height: 20px;
-	/*font-size: 14px;*/
 	background: url(../images/quiz/answer.png) no-repeat 5px 2px #FCFCFC;
 	border:1px solid #F6F6F6;
-	border-radius: 3px;
 }
 .main-quiz-holder .resultsview-qhover li.selected {
 	background: url(../images/quiz/incorrect.png) no-repeat 5px 2px;
@@ -227,14 +216,9 @@
 	height: 19px;
 	cursor: pointer;
 	padding: 5px 10px;
-	font-size: 16px;
+	font-size: 14px;
 	padding: 5px 15px;
 	color: #4c4c4c;
-	border-radius: 4px;/* text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
-  -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2), inset 0 0 6px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.4);*/
-   
 }
 .main-quiz-holder .correct {
 	background: #c3e462;

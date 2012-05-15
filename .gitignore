@@ -7,3 +7,6 @@ _*/*
 demos/*
 !.gitignore
 *copy*
+*.url
+*temp*
+*backup*
