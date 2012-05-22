@@ -4422,7 +4422,7 @@ var attachEvents = function() {
 	attachEvents = null;
 };
 
-//links in bars, or those with  data-role become buttons
+//links in bars, or those with data-role become buttons
 //auto self-init widgets
 $( document ).bind( "pagecreate create", function( e ){
 

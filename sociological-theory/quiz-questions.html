@@ -18,6 +18,9 @@
 <!-- Start of first page: #one -->
 <div data-role="page" id="quiz" class="type-interior"> 
   <!-- Quiz JS and CSS needs to go inside  the page container.  -->
+  <link rel='stylesheet' href='../assets/css/quiz-styles.css' />
+  <script src='quiz-questions.js'></script> 
+  <script src='../assets/js/jquery.jquizzy.js'></script>
   <div data-role="header" data-theme="b" >
     <h1> Quiz questions</h1>
     <a href="menu.html" data-icon="arrow-l" data-direction="reverse">Menu</a> </div>
@@ -26,7 +29,7 @@
   
     <!-- Don't Fix position because it can overlay quiz questions and feedback.-->
   <!-- Perhaps hide the footer nav in the quiz to discourage cheating. Also seems to break on iPad. -->
-	<div data-role="footer" data-id="myfooter" data-position="fixed">
+<!--  <div data-role="footer" data-id="myfooter" data-position="fixed">
     <div data-role="navbar">
       <ul>
         <li><a href="../index.html" data-role="button" data-icon="home">Home</a> </li>
@@ -34,17 +37,15 @@
         <li><a href="../quiz-menu.html" data-role="button" data-icon="check" data-prefetch>Quiz</a></li>
       </ul>
     </div>
-  </div>
+  </div>-->
   <!-- /footer --> 
   
   <div data-role="content">
     <div class="content-primary">
    
-   	<!-- Load Quiz-questions without AJAX because it has its own CSS and Javascripts -->
-      <div style="text-align:center">
-        <h2>Let's get started! </h2>
-        <p><a href="quiz-questions.html" data-role="button" data-inline="true" data-icon="star"  data-theme="b" data-ajax="false">Start Quiz</a></p>
-      </div> 
+      <div id='quiz-container'> </div>
+      <!-- give some scrolling space below -->
+    
     </div>
     <div class="content-secondary">
       <div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="c"> 
@@ -74,7 +75,18 @@
     <!-- /content-secondary --> 
   </div>
   <!-- /content --> 
+  
+
+  <script>
+ $('#quiz-container').jquizzy({
+	 		questions: init.questions, 
+			resultComments: init.resultComments,
+			twitterStatus: 'Woo! I got {score} on Sociological Theory quiz in Think Sociology Try it! http://bit.ly/linky'
+		});
+ </script>
 </div>
 <!-- /page one --> 
+
+
 </body>
 </html>

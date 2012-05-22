@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html manifest="cache.appcache">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Offline</title>
+<link rel="stylesheet" type="text/css" href="assets/css/themes/green.min.css" />
+<link rel="stylesheet" type="text/css" href="assets/css/jquery.mobile.structure.css">
+<link rel="stylesheet" type="text/css" href="assets/css/custom-styles.css">
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/custom-scripts.js"></script>
+<script src="assets/js/jquery.mobile.min.js"></script>
+<!-- PhoneGap Debug -->
+<!--<script src="http://debug.phonegap.com/target/target-script-min.js#thinksociology"></script>-->
+</head>
+<body>
+<!-- We don't want a back button on the home page -->
+<div data-role="page" class="type-home" data-add-back-btn="false" data-dom-cache="true">
+  <div data-role="header" data-theme="c"> 
+   
+   
+    <div class="banner"> <img src="assets/images/banner.jpg" alt="Think Sociology" />  
+   </div>
+  </div>
+  <div data-role="content">
+   <h1>Offline</h1>
+    The network connection has been lost. Please try again later.    
+  </div>
+  <!-- /content--> 
+  <!-- Fix position of footer on main nav pages. e.g. home -->
+  <div data-role="footer" data-id="myfooter" data-position="fixed">
+    <div data-role="navbar">
+     
+    </div>
+    <!-- /navbar --> 
+  </div>
+  <!-- /footer --> 
+</div>
+<!-- /page -->
+</body>
+</html>

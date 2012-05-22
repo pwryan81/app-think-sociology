@@ -12,7 +12,6 @@ $(document).bind("mobileinit", function () {
 	//AJAX related config
 	//$.mobile.pushStateEnabled = true;
     //$.mobile.ajaxEnabled = false;
-    //$.mobile.allowCrossDomainPages = true;
     //$.mobile.defaultDialogTransition = 'pop';
     // $.mobile.defaultPageTransition = 'slide';  //none is best for mobile, cos transition is not too smooth.
     $.mobile.defaultPageTransition = 'none';  // Fade is best, because slide doesn't know the best direction to slide unless specified.
@@ -23,7 +22,7 @@ $(document).bind("mobileinit", function () {
     // Navigation
     $.mobile.page.prototype.options.backBtnText = "Back";
     $.mobile.page.prototype.options.addBackBtn = true; // Leave this as true, so it will add a back button if none is specified. Does not add button if explictly set on page header.
-    $.mobile.page.prototype.options.backBtnTheme = "b";
+    $.mobile.page.prototype.options.backBtnTheme = "a";
 
     $.mobile.loadingMessage = "Thinking..."
     $.mobile.pageLoadErrorMessage = "Oops! Page not found.";
@@ -66,6 +65,14 @@ $(document).delegate("#glossary", "pageinit", function () {
 	
 });
 
+$(document).bind("#quiz", "pageinit", function () {
+		alert('Quiz init');
+		$('#quiz-container').jquizzy({
+	 		questions: init.questions, 
+			resultComments: init.resultComments
+		});
+	
+});	
 
 /* Reusable functions on any page */
 $(document).bind("pageinit", function () {

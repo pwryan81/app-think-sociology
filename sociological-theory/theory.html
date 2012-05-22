@@ -18,44 +18,52 @@
 <!-- Start of first page: #menu --> 
 
 <div data-role="page" class="type-interior">
-  <div data-role="header"  data-theme="b">
+  <div data-role="header" data-theme="b">
     <h1>Theory</h1>
-    <a href="menu.html" data-icon="arrow-l"  data-direction="reverse">Back</a> 
+    <a href="menu.html" data-icon="arrow-l" data-direction="reverse">Menu</a> 
   </div>
   <!-- /header -->
   
   <div data-role="content">
     <div class="content-primary">
-      <div data-role="collapsible" data-collapsed="false">
+    
+   
+    
+    
+    <div data-role="collapsible-set">
+      <div data-role="collapsible" data-collapsed="true">
         <h3>Functionalism</h3>
         <ul>
-          <li>society is a system of connected parts working together to keep society intact</li>
-          <li> it is important to consider the function of any issue<br>
+          <li>society is a system of connected parts working together to keep society intact.</li>
+          <li> it is important to consider the function of any issue.<br>
           </li>
-          <li>society is fairly stable, which means that things occur in society for a specific function<br>
+          <li>society is fairly stable, which means that things occur in society for a specific function.<br>
           </li>
-          <li>suggests society will find a balance point of its own</li>
+          <li>suggests society will find a balance point of its own.</li>
         </ul>
       </div>
       <!-- /collapsible -->
-      <div data-role="collapsible" data-collapsed="false">
+      <div data-role="collapsible">
         <h3>Conflict theory</h3>
         <ul>
-          <li>focuses on social classes and their drastic differences in wealth, power and prestige</li>
-          <li>upper class controls society's wealth and resources and exploits the lower class </li>
-          <li>once a group has power, they want to keep it, so they are likely to create advantages for themselves</li>
+          <li>focuses on social classes and their drastic differences in wealth, power and prestige.</li>
+          <li>upper class controls society's wealth and resources and exploits the lower class. </li>
+          <li>once a group has power, they want to keep it, so they are likely to create advantages for themselves.</li>
         </ul>
       </div>
       <!-- /collapsible -->
-      <div data-role="collapsible" data-collapsed="false">
+      <div data-role="collapsible">
         <h3>Symbolic interactionism</h3>
         <ul>
-          <li>believes the root of society comes from its symbols</li>
-          <li>society is fluid, meaning it is always in the process of change because the symbols we use and their interpretations change</li>
-          <li>disputes arise when people don't share the same definitions of symbols</li>
+          <li>believes the root of society comes from its symbols.</li>
+          <li>society is fluid, meaning it is always in the process of change because the symbols we use and their interpretations change.</li>
+          <li>disputes arise when people don't share the same definitions of symbols.</li>
         </ul>
       </div>
       <!-- /collapsible --> 
+      </div> <!-- /collapsible-set -->
+      
+     
       
     </div>
     <!-- /content-primary -->
@@ -67,11 +75,11 @@
             <h3>Get the topic</h3>
             </a></li>
           <li data-theme="b"> <h3>Theory</h3>
-            </li>
-          <li> <a href="key-terms.html">
+          </li>
+          <li> <a href="key-terms.html" data-prefetch>
             <h3>Key terms</h3>
             </a></li>
-          <li> <a href="wrap-your-mind.html"  data-ajax="false">
+          <li> <a href="wrap-your-mind.html" data-prefetch>
             <h3>Wrap your mind</h3>
             </a> </li>
           <li><a href="quiz.html" data-prefetch>
@@ -81,7 +89,7 @@
           <li><a href="glance.html" data-prefetch>
             <h3>At a glance</h3>
             </a></li>
-          <!-- <li data-theme="a" data-icon="false"><a href="../index.html" data-transition="slide" data-direction="reverse">
+          <!-- <li data-theme="a" data-icon="false"><a href="../index.html" data-direction="reverse">
             <h3>&lt; Choose another topic</h3>
             </a></li> -->           
         </ul>
@@ -97,9 +105,9 @@
   <div data-role="footer" data-id="myfooter" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="../index.html" data-role="button" data-transition="slideup">Home</a></li>
-        <li><a href="../glossary.html"  data-role="button"  data-transition="slideup">Glossary</a></li>
-        <li><a href="../quiz-menu.html"  data-role="button"  data-transition="slideup">Quiz</a></li>
+        <li><a href="../index.html" data-role="button" data-icon="home">Home</a></li>
+        <li><a href="../glossary.html" data-role="button" data-icon="grid" data-prefetch>Glossary</a></li>
+        <li><a href="../quiz-menu.html" data-role="button" data-icon="check" data-prefetch>Quiz</a></li>
       </ul>
     </div>
     <!-- /navbar --> 

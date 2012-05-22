@@ -46,7 +46,7 @@
 			 average: "Acceptable.",
 			 bad: "Well, that was disappointing.",
 			 poor: "Random clicking won't get you far.",
-			 worst: "Fail!"
+			 worst: "Perhaps you should read the text first?"
 	  }
 
  };

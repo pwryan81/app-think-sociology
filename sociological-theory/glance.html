@@ -17,42 +17,49 @@
 <div data-role="page" class="type-interior">
   <div data-role="header" data-theme="b">
     <h1>At a glance</h1>
-    <a href="menu.html" data-icon="arrow-l"  data-direction="reverse">Back</a> </div>
+    <a href="menu.html" data-icon="arrow-l" data-direction="reverse">Menu</a> </div>
   <!-- /header -->
   
   <div data-role="content">
     <div class="content-primary">
-      <ul data-role="listview" data-inset="true">
-        <li>
+      <div data-role="collapsible-set" data-collapsed="true">
+        <div data-role="collapsible">
           <h3>The Functionalists</h3>
-          <ul>
+          <ul data-role="listview" data-inset="true">
             <li><a href="./features/herbert-spencer.html" data-prefetch><img src="img/herbert-spencer.png" />Herbert Spencer</a> </li>
             <li><a href="./features/emile-durkheim.html" data-prefetch><img src="img/emile-durkheim.png" />Emile Durkheim</a> </li>
             <li><a href="./features/talcott-parsons.html" data-prefetch><img src="img/talcott-parsons.png" />Talcott Parsons</a> </li>
             <li><a href="./features/robert-merton.html" data-prefetch><img src="img/robert-merton.png" />Robert Merton</a> </li>
           </ul>
-        </li>
-        <li>
+        </div>
+        <!-- /collapsible -->
+        <div data-role="collapsible">
           <h3>The Conflict Theorists</h3>
-          <ul>
+          <ul data-role="listview" data-inset="true">
             <li><a href="./features/karl-marx.html" data-prefetch><img src="img/karl-marx.png" />Karl Marx</a></li>
             <li><a href="./features/pierre-bourdieu.html" data-prefetch><img src="img/pierre-bourdieu.png" />Pierre Bourdieu</a></li>
             <li><a href="./features/raewyn-connell.html" data-prefetch><img src="img/raewyn-connell.png" />Raewyn Connell</a></li>
           </ul>
-        </li>
-        <li>
+        </div>
+        <!-- /collapsible -->
+        
+        <div data-role="collapsible">
           <h3>The Symbolic Interactionists</h3>
-          <ul>
+          <ul data-role="listview" data-inset="true">
             <li><a href="./features/herbert-blumer.html" data-prefetch><img src="img/herbert-blumer.png" />Herbert Blumer</a></li>
             <li><a href="./features/erving-goffman.html" data-prefetch><img src="img/erving-goffman.png" />Erving Goffman</a></li>
             <li><a href="./features/howard-becker.html" data-prefetch><img src="img/howard-becker.png" />Howard Becker</a></li>
           </ul>
-        </li>
-      </ul>
+        </div>
+        <!-- /collapsible --> 
+        
+      </div>
+      <!-- /collapsible-set --> 
+      
     </div>
     <!-- /content-primary -->
     <div class="content-secondary">
-      <div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="c">
+      <div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="c"> 
         <!-- <h3>More in Sociological Theory</h3> -->
         <ul data-role="listview" data-dividertheme="a">
           <li> <a href="get-the-topic.html" data-prefetch>
@@ -64,7 +71,7 @@
           <li> <a href="key-terms.html" data-prefetch>
             <h3>Key terms</h3>
             </a> </li>
-          <li> <a href="wrap-your-mind.html"  data-ajax="false">
+          <li> <a href="wrap-your-mind.html" data-prefetch>
             <h3>Wrap your mind</h3>
             </a> </li>
           <li><a href="quiz.html" data-prefetch>
@@ -74,7 +81,7 @@
           <li data-theme="b">
             <h3>At a glance</h3>
           </li>
-      	</ul>
+        </ul>
       </div>
     </div>
     <!-- /content-secondary --> 
@@ -84,9 +91,9 @@
   <div data-role="footer" data-id="myfooter" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="../index.html" data-role="button" data-transition="slideup">Home</a> </li>
-        <li><a href="../glossary.html"  data-role="button"  data-transition="slideup">Glossary</a></li>
-        <li><a href="../quiz-menu.html"  data-role="button"  data-transition="slideup">Quiz</a></li>
+        <li><a href="../index.html" data-role="button" data-icon="home">Home</a> </li>
+        <li><a href="../glossary.html" data-role="button" data-icon="grid" data-prefetch>Glossary</a></li>
+        <li><a href="../quiz-menu.html" data-role="button" data-icon="check" data-prefetch>Quiz</a></li>
       </ul>
     </div>
     <!-- /navbar --> 

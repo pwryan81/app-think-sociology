@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html manifest="cache.appcache">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -16,20 +16,20 @@
 </head>
 <body>
 <!-- We don't want a back button on the home page -->
-<div data-role="page" class="type-home"  data-add-back-btn="false"  data-dom-cache="true">
+<div data-role="page" class="type-home" data-add-back-btn="false" data-dom-cache="true">
   <div data-role="header" data-theme="c"> 
     <!-- <h1>Think Sociology</h1>-->
    
     <div class="banner"> <img src="assets/images/banner.jpg" alt="Think Sociology" />  </div>
   </div>
-  <div data-role="content" >
+  <div data-role="content">
     <div class="content-primary" data-theme="a">
       <nav>
         <ul data-role="listview" data-theme="a">
           <li> <a href="sociological-theory/menu.html"> <img src="assets/images/80px/ch01.jpg" width="80" height="80" alt="Sociology">
             <h3>Sociology</h3>
             </a> </li>
-            <li> <a href="sociological-theory/menu.html" data-prefetch> <img src="assets/images/80px/ch02.jpg" width="80" height="80" alt="Sociology">
+            <li> <a href="sociological-theory/menu.html"> <img src="assets/images/80px/ch02.jpg" width="80" height="80" alt="Sociology">
             <h3>Sociological Theory</h3>
             </a> </li>
             <li> <a href="sociological-theory/menu.html"> <img src="assets/images/80px/ch03.jpg" width="80" height="80" alt="Sociology">
@@ -86,12 +86,12 @@
   </div>
   <!-- /content--> 
   <!-- Fix position of footer on main nav pages. e.g. home -->
-  <div data-role="footer" data-id="myfooter" data-position="fixed" >
+  <div data-role="footer" data-id="myfooter" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="index.html" data-role="button" class="ui-btn-active ui-state-persist">Home</a> </li>
-        <li><a href="glossary.html"  data-role="button" data-transition="slide" >Glossary</a></li>
-        <li><a href="quiz-menu.html"  data-role="button" data-transition="slide" data-prefetch>Quiz</a></li>
+        <li><a href="index.html" data-role="button" data-icon="home" class="ui-btn-active ui-state-persist">Home</a> </li>
+        <li><a href="glossary.html" data-role="button" data-icon="grid" data-prefetch>Glossary</a></li>
+        <li><a href="quiz-menu.html" data-role="button" data-icon="check" data-prefetch>Quiz</a></li>
       </ul>
     </div>
     <!-- /navbar --> 

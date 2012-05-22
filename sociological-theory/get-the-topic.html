@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="../cache.appcache">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,39 +15,12 @@
 
 <body>
 <div data-role="page" class="type-interior">
-  <div data-role="header"  data-theme="b">
-    <h1>Get the Topic</h1>
-    <a href="menu.html" data-icon="arrow-l"  data-direction="reverse">Back</a> </div>
+  <div data-role="header" data-theme="b">
+    <h1>Sociological Theory</h1>
+    <a href="menu.html" data-icon="arrow-l" data-direction="reverse">Menu</a> </div>
   <!-- /header -->
-  <div data-role="content">
-    <div class="content-primary">
-      <h2>Sociological Theory</h2>
-      <p> provides us with a</p>      
-<div class="featureBox"> <strong>framework to study the social world</strong> </div>
-      <p>and this involves using      </p>
-      <div class="featureBox"> <strong>Theoretical paradigms </strong>-  collections of theories, with ideas and methods which constitute a more or less unified approach to studying the social world.</div>
-      <p>There are three core paradigms:      </p>
-      <div class="featureBox"> <strong>Functionalism</strong>
-        <ul>
-          <li>views society as a system of interrelated parts.</li>
-          <li>is a macro orientation because it studies how social structures affect how a society works.</li>
-        </ul>
-      </div>
-      <div class="featureBox"> <strong>Conflict theory </strong>
-        <ul>
-          <li>studies issues such as ethnicity, gender, social class, criminal justice and international relations.</li>
-          <li> is a macro orientation because it studies how the struggle for resources holds society together.</li>
-        </ul>
-      </div>
-      <div class="featureBox"> <strong>Symbolic interactionism</strong>
-        <ul>
-          <li>focuses on how people interact in their everyday lives with their society's symbols.</li>
-          <li> is a micro orientation on the individual and how he or she interacts with the social environment.</li>
-        </ul>
-      </div>
-      </p>
-    </div>
-    <!-- /content-primary -->
+  <div data-role="content"> 
+    
     
     <div class="content-secondary">
       <div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="c"> 
@@ -59,10 +32,10 @@
           <li> <a href="theory.html" data-prefetch>
             <h3>Theory</h3>
             </a> </li>
-          <li> <a href="key-terms.html">
+          <li> <a href="key-terms.html" data-prefetch>
             <h3>Key terms</h3>
             </a> </li>
-          <li> <a href="wrap-your-mind.html"  data-ajax="false">
+          <li> <a href="wrap-your-mind.html" data-prefetch>
             <h3>Wrap your mind</h3>
             </a> </li>
           <li><a href="quiz.html" data-prefetch>
@@ -77,14 +50,68 @@
     </div>
     <!-- /content-secondary --> 
     
+    
+    
+    <div class="content-primary">     
+      <div class="flowchartBoxTop">&nbsp;</div>
+      <div class="flowchartBox"> <strong>Sociological Theory      </strong></div>
+      <div class="flowchartBoxBottom">&nbsp;</div>
+      
+      <div class="flowchartBoxConnector"> provides us with a</div>
+      <div class="flowchartBoxTop">&nbsp;</div>
+      <div class="flowchartBox"> <strong>framework to study the social world</strong> </div>
+      <div class="flowchartBoxBottom">&nbsp;</div>
+      
+      <div class="flowchartBoxConnector">and this involves using</div>
+      
+      <div class="flowchartBoxTop">&nbsp;</div>
+      <div class="flowchartBox"> <strong>Theoretical paradigms </strong>-  collections of theories, with ideas and methods which constitute a more or less unified approach to studying the social world.</div>
+      <div class="flowchartBoxBottom">&nbsp;</div>
+      
+      <div class="flowchartBoxConnector">There are three core paradigms: </div>
+      
+      <div class="flowchartBoxTop">&nbsp;</div>
+      <div class="flowchartBox"> <strong>Functionalism</strong>
+        <ul>
+          <li>views society as a system of interrelated parts.</li>
+          <li>is a macro orientation because it studies how social structures affect how a society works.</li>
+        </ul>
+      </div>
+      <div class="flowchartBoxBottom">&nbsp;</div>
+      
+      <div class="flowchartBoxConnector">&nbsp;</div>
+      
+      <div class="flowchartBoxTop">&nbsp;</div>
+      <div class="flowchartBox"> <strong>Conflict theory </strong>
+        <ul>
+          <li>studies issues such as ethnicity, gender, social class, criminal justice and international relations.</li>
+          <li> is a macro orientation because it studies how the struggle for resources holds society together.</li>
+        </ul>
+      </div>
+      <div class="flowchartBoxBottom">&nbsp;</div>
+      
+      <div class="flowchartBoxConnector">&nbsp;</div>
+      
+      <div class="flowchartBoxTop">&nbsp;</div>
+      <div class="flowchartBox"> <strong>Symbolic interactionism</strong>
+        <ul>
+          <li>focuses on how people interact in their everyday lives with their society's symbols.</li>
+          <li> is a micro orientation on the individual and how he or she interacts with the social environment.</li>
+        </ul>
+      </div>
+      <div class="flowchartBoxBottom">&nbsp;</div>
+      <p>&nbsp;</p>
+    </div>
+    <!-- /content-primary -->
+    
   </div>
   <!-- /content -->
   <div data-role="footer" data-id="myfooter" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="../index.html" data-role="button" data-transition="slideup">Home</a> </li>
-        <li><a href="../glossary.html" data-role="button" data-transition="slideup">Glossary</a></li>
-        <li><a href="../quiz-menu.html" data-role="button" data-transition="slideup">Quiz</a></li>
+        <li><a href="../index.html" data-role="button" data-icon="home">Home</a> </li>
+        <li><a href="../glossary.html" data-role="button" data-icon="grid" data-prefetch>Glossary</a></li>
+        <li><a href="../quiz-menu.html" data-role="button" data-icon="check" data-prefetch>Quiz</a></li>
       </ul>
     </div>
   </div>

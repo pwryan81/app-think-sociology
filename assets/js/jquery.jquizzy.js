@@ -42,13 +42,15 @@
         var superContainer = $(this),
             answers = [],
    			 introFob = '	<div class="intro-container slide-container"><div class="question-number">'+config.startText+'</div><a class="nav-start" href="#" data-role="button" data-inline="true" data-icon="star" data-theme="b">Start Quiz</a></div>',
-            exitFob = '<div class="results-container slide-container"><div class="question-number">' + config.endText + '</div><div class="result-keeper"></div></div><div class="notice">Please select an option</div><div class="progress-keeper" ><div class="progress"></div></div>',
+            exitFob = '<div class="results-container slide-container"><div class="question-number">' + config.endText + '</div><div class="progress-keeper"><div class="progress"></div></div><div class="result-keeper"></div></div><div class="notice">Please select an option</div>',
             contentFob = '';
         superContainer.addClass('main-quiz-holder');
 
         for (questionsIteratorIndex = 0; questionsIteratorIndex < config.questions.length; questionsIteratorIndex++)
         {
-            contentFob += '<div class="slide-container"><div class="question-number">Question ' + (questionsIteratorIndex + 1) + ' of ' + config.questions.length + '</div><div class="question">' + config.questions[questionsIteratorIndex].question + '</div><ul class="answers">';
+            contentFob += '<div class="slide-container"><div class="question-number">Question ' + (questionsIteratorIndex + 1) + ' of ' + config.questions.length + '</div>';
+			contentFob += '<div class="progress-keeper"><div class="progress"></div></div>';			
+			contentFob += '<div class="question">' + config.questions[questionsIteratorIndex].question + '</div><ul class="answers">';
             for (answersIteratorIndex = 0; answersIteratorIndex < config.questions[questionsIteratorIndex].answers.length; answersIteratorIndex++)
             {
                 contentFob += '<li>' + config.questions[questionsIteratorIndex].answers[answersIteratorIndex] + '</li>';
@@ -63,9 +65,7 @@
 
             if (questionsIteratorIndex < config.questions.length - 1)
             {
-                contentFob += '<div class="next"><a class="nav-next" href="#" data-role="button" data-inline="true" data-icon="arrow-r" data-theme="b">Next</a></div>';
-			  // contentFob += '<div class="next"><a href="#" class="nav-next ui-btn ui-btn-inline ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-b"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Next</span><span class="ui-icon ui-icon-arrow-r ui-icon-shadow">&nbsp;</span></span></a></div>';
-			   
+                contentFob += '<div class="next"><a class="nav-next" href="#" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" data-theme="b">Next</a></div>';
             }
             else
             {
@@ -76,8 +76,9 @@
             answers.push(config.questions[questionsIteratorIndex].correctAnswer);
         }
 
-        superContainer.html(introFob + contentFob + exitFob);
-
+        //superContainer.html(introFob + contentFob + exitFob);
+		superContainer.html(contentFob + exitFob);
+		
         var progress = superContainer.find('.progress'),
             progressKeeper = superContainer.find('.progress-keeper'),
             notice = superContainer.find('.notice'),
@@ -85,6 +86,8 @@
             userAnswers = [],
             questionLength = config.questions.length,
             slidesList = superContainer.find('.slide-container');
+			
+			console.log('progressWidth: ' + progressWidth);
 
         function checkAnswers()
         {
@@ -124,9 +127,9 @@
             else return config.resultComments.worst;
         }
 
-        progressKeeper.hide();
+        //progressKeeper.hide();
         notice.hide();
-        slidesList.hide().first().fadeIn(300);
+        slidesList.hide().first().fadeIn(200);
 
         superContainer.find('li').click(function ()
         {
@@ -142,60 +145,66 @@
                 thisLi.addClass('selected');
             }
         });
-
+		
+		/* Show first question */
         superContainer.find('.nav-start').click(function ()
         {
-
-            $(this).parents('.slide-container').fadeOut(300, function ()
+            $(this).parents('.slide-container').fadeOut(200, function ()
             {
-                $(this).next().fadeIn(300);
-                progressKeeper.fadeIn(1000);
+                $(this).next().fadeIn(200);
+                progressKeeper.fadeIn(600);
             });
             return false;
 
         });
-
+		
+		/* Next button clicked */
         superContainer.find('.next').click(function ()
         {
-
+			/* if no option selected*/
             if ($(this).parents('.slide-container').find('li.selected').length === 0)
             {
-                notice.fadeIn(300);
+                notice.fadeIn(200);
                 return false;
             }
 
             notice.hide();
-            $(this).parents('.slide-container').fadeOut(300, function ()
+            $(this).parents('.slide-container').fadeOut(200, function ()
             {
-                $(this).next().fadeIn(300);
+                $(this).next().fadeIn(200);
             });
+			//alert("animating to: " + progress.width());
             progress.animate(
             {
-                width: progress.width() + Math.round(progressWidth / questionLength)
-            }, 1000);
+				width: progress.width() + Math.round(progressWidth / questionLength) + '%'				
+            }, 600);
+			console.log(progress.width() + Math.round(progressWidth / questionLength) + '%');			
             return false;
         });
-
+		
+		
+		/* Previous button clicked */
         superContainer.find('.prev').click(function ()
         {
             notice.hide();
-            $(this).parents('.slide-container').fadeOut(300, function ()
+            $(this).parents('.slide-container').fadeOut(200, function ()
             {
-                $(this).prev().fadeIn(300);
+                $(this).prev().fadeIn(200);
             });
 
             progress.animate(
             {
-                width: progress.width() - Math.round(progressWidth / questionLength)
-            }, 300);
+                width: progress.width() - Math.round(progressWidth / questionLength) + '%'
+            }, 200);
             return false;
         });
 
+		/* Final button clicked */
         superContainer.find('.final').click(function ()
         {
             if ($(this).parents('.slide-container').find('li.selected').length === 0)
             {
-                notice.fadeIn(300);
+                notice.fadeIn(200);
                 return false;
             }
 
@@ -241,7 +250,7 @@
 
 
             resultSet = '<h3 class="featureBox">' + judgeSkills(score) + ' You scored ' + score + '%</h3>' + shareButton + resultSet + '<div class="jquizzy-clear"></div>';
-            superContainer.find('.result-keeper').html(resultSet).show(300);
+            superContainer.find('.result-keeper').html(resultSet).show(200);
             superContainer.find('.resultsview-qhover').hide();
             superContainer.find('.result-row').hover(function ()
             {
@@ -250,9 +259,9 @@
             {
                 $(this).find('.resultsview-qhover').hide();
             });
-            $(this).parents('.slide-container').fadeOut(300, function ()
+            $(this).parents('.slide-container').fadeOut(200, function ()
             {
-                $(this).next().fadeIn(300);
+                $(this).next().fadeIn(200);
             });
             return false;
         });

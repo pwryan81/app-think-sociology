@@ -1,12 +1,15 @@
+!.gitignore
+# ignore anything starting with underscore
 _*/*
 */_*/*
 */*/_*/*
 */*/*/_*/*
 */*/*/*/_*/*
 */*/*/*/*/_*/*
-demos/*
-!.gitignore
 *copy*
-*.url
-*temp*
 *backup*
+*temp*
+*test*
+*.url
+ProjectSettings
+*.zip
