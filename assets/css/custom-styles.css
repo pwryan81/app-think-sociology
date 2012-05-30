@@ -3,34 +3,67 @@
 
 /* Custom styles for content formatting not related to jQuery Mobile */
 
+@font-face {
+	font-family: 'SofiaProLightRegular';
+	src: url('../webfonts/SofiaProLight-webfont.eot');
+	src: url('../webfonts/SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),  url('../webfonts/SofiaProLight-webfont.woff') format('woff'),  url('../webfonts/SofiaProLight-webfont.ttf') format('truetype'),  url('../webfonts/SofiaProLight-webfont.svg#SofiaProLightRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'TitilliumText22LRegular';
+	src: url('../webfonts/TitilliumText22L003-webfont.eot');
+	src: url('../webfonts/TitilliumText22L003-webfont.eot?#iefix') format('embedded-opentype'),  url('../webfonts/TitilliumText22L003-webfont.woff') format('woff'),  url('../webfonts/TitilliumText22L003-webfont.ttf') format('truetype'),  url('../webfonts/TitilliumText22L003-webfont.svg#TitilliumText22LRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'ChunkFiveRegular';
+	src: url('../webfonts/Chunkfive-webfont.eot');
+	src: url('../webfonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),  url('../webfonts/Chunkfive-webfont.woff') format('woff'),  url('../webfonts/Chunkfive-webfont.ttf') format('truetype'),  url('../webfonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'CallunaRegular';
+	src: url('../webfonts/Calluna-Regular-webfont.eot');
+	src: url('../webfonts/Calluna-Regular-webfont.eot?#iefix') format('embedded-opentype'),  url('../webfonts/Calluna-Regular-webfont.woff') format('woff'),  url('../webfonts/Calluna-Regular-webfont.ttf') format('truetype'),  url('../webfonts/Calluna-Regular-webfont.svg#CallunaRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+h1 {
+	/*font-family: 'TitilliumText22LRegular', Arial, sans-serif; */
+		/*font-family: 'SofiaProLightRegular', Arial, sans-serif; */
+		/*font-family: 'ChunkFiveRegular', Arial, sans-serif; */
+		/*font-family: 'CallunaRegular', Arial, sans-serif;*/
+}
 h2 {
 	background-color:#333333;
 	color: #FFFFFF;
 	padding: 10px 20px;
-	/*margin:0 0 10px 0;*/
-	margin:0 0 20px 0 ;
+	margin:0 0 20px 0;
 	font-size:16px;
 }
-
 /* Styles for plain text, both paragraphs and list of text */
 p, .content-primary li {
 	font-size:14px;
-	line-height: 22px;	
+	line-height: 22px;
 }
-
- 
- ul {
+ul {
 	list-style-type: none;
-	list-style-image: url(../images/bullet-arrow-r.png); 
- }
- 
-
-.banner {	
-	text-align:center;
-	max-height:150px;
+	list-style-image: url(../images/bullet-arrow-r.png);
+}
+.banner {
+	margin:-15px -15px 0px -15px;
+	min-height:70px;
+	min-width:320px;
 }
 .banner img {
-	max-width:100%;
+	min-width:33%;
+	min-width:320px;
+}
+img {
+	max-width:100%; /* don't want images scaled above actual size, unless explictly intented */
 }
 .splashImage {
 	max-width:100%;
@@ -40,20 +73,17 @@ li a img {
 }
 /* Green box as seen on Get The Topic pages */
 .flowchartBox {
-	/*border:1px solid #7FA23E;*/
 	padding: 0 20px;
 	text-align: center;
 }
 .flowchartBox ul {
 	margin-bottom:0;
 	text-align:left;
-	
 }
 .flowchartBoxTop {
 	height:15px;
 	border: 2px solid #7FA23E;
 	border-bottom: none;
-	
 }
 .flowchartBoxBottom {
 	height: 15px;
@@ -66,54 +96,65 @@ li a img {
 	padding: 20px 10px;
 	border-right: 2px solid #7FA23E;
 	min-height:30px;
-
 }
-
-
-.articleImg {
+.subheader {
+	background-color:#333;
+	color: #FFF;
+	font-size:11px;
+	padding:13px 15px;
+	top:40px;
+	font-weight:normal;
+}
+.subheader a {
+	color: #FFF !important;
+	font-weight: normal;
+}
+.content-image {
 	float:left;
 	margin-right: 20px;
-	margin-bottom: 10px;
+	margin-bottom: 8px;
 }
-
-#quizmenu img {
-	border:2px solid #666;
-	margin:0 3px 1px 0;
-}
-#quizmenu img:hover {
-	border-color:#0C0;
-}
-/* JQM STRUCTURE overrides */
-/* If overriding default strucutre, leave comment  */
+/* 
+* -----------------------
+* JQM STRUCTURE OVERRIDES 
+* -----------------------
+* If overriding default strucutre, leave comment 
+*/
 .ui-content {
 	overflow:hidden; /* Avoid double scrollbar in fullscreen view */
 }
-.ui-header .ui-title, .ui-footer .ui-title {
-margin: .6em 20% .8em;
+.ui-header .ui-title {
+	margin: .6em 20% .8em; /* Width of title */
 }
-
 .ui-collapsible-heading {
-margin: 0;
+	margin: 0;
 }
-
 .ui-collapsible-heading .ui-btn-inner {
-padding: 15px 40px; /* Widen the button for touch */
+	padding: 15px 40px; /* Widen the button for touch */
 }
+.ui-li .ui-btn-text a.ui-link-inherit, .ui-li-heading, .ui-btn-inner  {
+	white-space: normal; /* Wrap long names on list items instad of cutting it off */
+}
+.ui-li-static {
+	font-size: inherit; /* Structure was causing the selected menu item to be 14px when non-select*/
+}
+/* 
+* --------------------------------
+* CUSTOM JQM THEMEROLLER OVERRIDES 
+* --------------------------------
+* Ideally, should be done in the themeroller if possible
+* The following styles override the default JQM styles 
+* Please add comments why they are being extended or overriden 
+*/
 
-/* CUSTOM JQM THEMEROLLER OVERRIDES */
-/* The following override the default JQM styles */
-/* Please add comments why they are being extended or overriden */
-
-
-/* Re-enable word wrapping on list view items */
 .ui-li, .ui-li-desc {
-	white-space: normal;
-}
-.ui-collapsible-heading a {
-/*margin: 0 0 5px 0; */ /* To fix the overlap in the 'more' box, but also adversely affects topics page  */
+	white-space: normal; /* Re-enable word wrapping on list view items */
 }
 .ui-body {
 	margin-bottom:20px; /* When stying inset divs with a particular background */
+}
+.ui-bar-c {
+	color: #7FA23E;
 }
 /*
 I disabled these because they were causing the "more" list to overlap its collapsible container. 
@@ -122,16 +163,14 @@ I disabled these because they were causing the "more" list to overlap its collap
 */
 
 .ui-collapsible {
-margin: 1em 0;
+	margin: 1em 0;
 }
-
 .ui-collapsible-content {
 	border:1px solid #CCC;
 	background-color:#F9F9F9;
 	border-top:none; /* To avoid a double border */
 	margin:0;
 }
-
 ::selection {
 	background:#7FA23E;
 	color:#FFF; /* Safari and Opera */
@@ -149,8 +188,7 @@ body {
 	background: #dddddd;
 }
 .ui-mobile .type-home .ui-content {
-	margin: 0;
-	background: #e5e5e5 url(../images/jqm-sitebg.png) top center repeat-x;
+	margin: 0;/*background: #e5e5e5 url(../images/jqm-sitebg.png) top center repeat-x;*/
 }
 /* fluid images moved from jquery.mobile.core.css*/
 .ui-mobile img {
@@ -159,12 +197,8 @@ body {
 .type-interior .content-secondary {
 	border-right: 0;
 	border-left: 0;
-	margin: 0 -15px 0;  
-	background: #fff;
-	/*border-top: 1px solid #ccc;*/ 
-}
-.type-home .ui-content {
-	margin-top: 5px;
+	margin: -15px -15px 0;  /* I changed top margin from 0 to -15px to eliminate the 15px gap at the top of the menus */
+	background: #fff;/*border-top: 1px solid #ccc;*/
 }
 .type-interior .ui-content {
 	padding-bottom: 0;
@@ -187,12 +221,12 @@ body {
 
 
 
-/* docs site layout */
-
+/* Styles inherited from JQM docs */
 @media all and (min-width: 650px) {
+/*
 .type-home .ui-content {
 	margin-top: 5px;
-}
+}*/
 .type-home .ui-content, .type-interior .ui-content {
 	padding: 0;
 	background: url(../images/px-ccc.gif) 50% 0 repeat-y;
@@ -214,9 +248,6 @@ body {
 	background: none;
 	border-top: none;
 }
-.type-index .content-secondary {
-	padding: 0;
-}
 .content-secondary .ui-collapsible {
 	margin: 0;
 	padding: 0;
@@ -224,10 +255,6 @@ body {
 .content-secondary .ui-collapsible-content {
 	border: none;
 }
-.type-index .content-secondary .ui-listview {
-	margin: 0;
-}
-
 .content-primary {
 	width: 56%;
 	float: right;
@@ -237,10 +264,6 @@ body {
 }
 .content-primary ul:first-child {
 	margin-top: 0;
-}
-.content-secondary h2 {
-	position: absolute;
-	left: -9999px;
 }
 .type-interior .content-primary {
 	padding: 1.5em 6% 3em 0;
@@ -258,49 +281,29 @@ body {
 	margin: 0;
 	padding: 0;
 }
-.type-interior .content-secondary .ui-li-divider {
-/*padding-top: 1em;
-	padding-bottom: 1em;*/
-}
 .type-interior .content-secondary {
 	margin: 0;
 	padding: 0;
 }
-
-
 /* the following two styles move the footer to the top directly under the header when for tablets and above */
 /* because iPads don't handle the fixed footer well */
 .ui-fixed-hidden {
 	position: relative;
 }
-.ui-footer-fixed {
+.ui-content .ui-listview {
+	margin: 0px;
+}
+}
 
+
+/* Desktops wider than iPad landscape */
  @media all and (min-width: 1025px) {
-	 /*  These are not really necessary, but will display on any screens wider than a 1024px iPad.
+/*  These are not really necessary, but will display on any screens wider than a 1024px iPad.
 	 */
-	  /*
-.type-home .ui-content {
-	background-position: 38.5%;
+	 
+.columns-two {
+	-moz-column-count:2; /* Firefox */
+	-webkit-column-count:2; /* Safari and Chrome */
+	column-count:2;
 }
-.type-interior .ui-content {
-	background-position: 30%;
-}
-.content-secondary {
-	width: 30%;
-	padding-right:6%;
-	margin: 30px 0 20px 5%;
-}
-.type-interior .content-secondary {
-	margin: 0;
-	padding: 0;
-}
-.content-primary {
-	width: 50%;
-	margin-right: 5%;
-	padding-right: 3%;
-}
-.type-interior .content-primary {
-	width: 60%;
-}
-*/
 }

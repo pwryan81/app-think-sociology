@@ -8,6 +8,7 @@
 <link rel="stylesheet" type="text/css" href="assets/css/themes/green.min.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/jquery.mobile.structure.css">
 <link rel="stylesheet" type="text/css" href="assets/css/custom-styles.css">
+<link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/custom-scripts.js"></script>
 <script src="assets/js/jquery.mobile.min.js"></script>
@@ -15,7 +16,7 @@
 <body>
 <!-- Don't cache the glossary. Too big -->
 <div data-role="page" id="glossary" class="type-interior"  data-add-back-btn="true">
-<div data-role="header" data-theme="a">
+<div data-role="header" data-theme="b">
   <h1>Glossary</h1>
   <!--<a href="index.html" data-icon="home" data-direction="reverse">Home</a> --> 
 </div>
@@ -23,28 +24,29 @@
 
 <div data-role="content">
   <div class="content-primary" data-inset="false" style="text-align:center">
-    <p>&nbsp;</p>
-    <p><a href="glossary-full.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b" data-inline="true" data-prefetch>Load  full glossary</a> <br />
-    </p>
-    <p>--- or ---</p>
+    <h3>What would you like to do?</h3>
+    <p><a href="glossary-full.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-theme="b" data-inline="true" data-mini="true" data-prefetch>Load  full glossary</a> <br />
+    </p><br>
+
+    <p> or go to <strong>key terms</strong> by topic:</p>
     <p>
-      <select id="key-terms" name="key-terms" data-mini="true" class="ui-btn-right" data-inline="true" data-theme="b">
-        <option value='' selected>Go to key terms</option>
-        <option value='sociology/key-terms.html'>Sociology</option>
-        <option value='sociology-theory/key-terms.html'>Sociological theory</option>
-        <option value='sociology-theory/key-terms.html'>Social Class in Australia</option>
-        <option value='sociology-theory/key-terms.html'>Race and Ethnic Stratification</option>
-        <option value='sociology-theory/key-terms.html'>Sex and Gender</option>
-        <option value='sociology-theory/key-terms.html'>Age and Ageing</option>
-        <option value='sociology-theory/key-terms.html'>Crime and the Legal System</option>
-        <option value='sociology-theory/key-terms.html'>Education and Employment</option>
-        <option value='sociology-theory/key-terms.html'>Marriage and Family</option>
-        <option value='sociology-theory/key-terms.html'>The Body, Health and Illness</option>
-        <option value='sociology-theory/key-terms.html'>Globalisation</option>
-        <option value='sociology-theory/key-terms.html'>Culture</option>
-        <option value='sociology-theory/key-terms.html'>Religion</option>
-        <option value='sociology-theory/key-terms.html'>Environmental Sustainability</option>
-        <option value='sociology-theory/key-terms.html'>Sociology Research</option>
+      <select id="select-keyterms" name="key-terms" data-mini="true" data-icon="arrow-r" data-inline="true" data-theme="b">
+        <option value='' selected>Select topic</option>
+        <option value='sociological-theory/key-terms.html'>Sociology</option>
+        <option value='sociological-theory/key-terms.html'>Sociological theory</option>
+        <option value='sociological-theory/key-terms.html'>Social Class in Australia</option>
+        <option value='sociological-theory/key-terms.html'>Race and Ethnic Stratification</option>
+        <option value='sociological-theory/key-terms.html'>Sex and Gender</option>
+        <option value='sociological-theory/key-terms.html'>Age and Ageing</option>
+        <option value='sociological-theory/key-terms.html'>Crime and the Legal System</option>
+        <option value='sociological-theory/key-terms.html'>Education and Employment</option>
+        <option value='sociological-theory/key-terms.html'>Marriage and Family</option>
+        <option value='sociological-theory/key-terms.html'>The Body, Health and Illness</option>
+        <option value='sociological-theory/key-terms.html'>Globalisation</option>
+        <option value='sociological-theory/key-terms.html'>Culture</option>
+        <option value='sociological-theory/key-terms.html'>Religion</option>
+        <option value='sociological-theory/key-terms.html'>Environmental Sustainability</option>
+        <option value='sociological-theory/key-terms.html'>Sociology Research</option>
       </select>
     </p>
   </div>

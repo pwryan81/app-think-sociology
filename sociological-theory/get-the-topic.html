@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
 <title>Get the topic</title>
 <link rel="stylesheet" type="text/css" href="../assets/css/themes/green.min.css">
 <link rel="stylesheet" type="text/css" href="../assets/css/jquery.mobile.structure.css">
@@ -16,8 +16,12 @@
 <body>
 <div data-role="page" class="type-interior">
   <div data-role="header" data-theme="b">
-    <h1>Sociological Theory</h1>
-    <a href="menu.html" data-icon="arrow-l" data-direction="reverse">Menu</a> </div>
+    <h1>Get the topic</h1>
+    <a href="menu.html" data-icon="arrow-l"  data-iconpos="notext" data-direction="reverse">Topic</a> 
+    <div class="subheader"><a href="menu.html">Sociological Theory</a> &gt; Get the topic</div>    
+    </div>
+    
+    
   <!-- /header -->
   <div data-role="content"> 
     
@@ -25,7 +29,7 @@
     <div class="content-secondary">
       <div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="c"> 
         <!-- <h3>More in Sociological Theory</h3> -->
-        <ul data-role="listview" data-dividertheme="a">
+        <ul data-role="listview" data-dividertheme="c">
           <li data-theme="b">
             <h3>Get the topic</h3>
           </li>
@@ -101,6 +105,8 @@
       </div>
       <div class="flowchartBoxBottom">&nbsp;</div>
       <p>&nbsp;</p>
+      <a href="menu.html" data-role="button" data-direction="reverse" data-theme="b" data-icon="arrow-l" data-iconpos="left" data-inline="true" >Back</a>
+    	 <p>&nbsp;</p>
     </div>
     <!-- /content-primary -->
     
@@ -109,7 +115,7 @@
   <div data-role="footer" data-id="myfooter" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="../index.html" data-role="button" data-icon="home">Home</a> </li>
+        <li><a href="../index.html" data-role="button" data-icon="home" data-prefetch>Home</a> </li>
         <li><a href="../glossary.html" data-role="button" data-icon="grid" data-prefetch>Glossary</a></li>
         <li><a href="../quiz-menu.html" data-role="button" data-icon="check" data-prefetch>Quiz</a></li>
       </ul>

@@ -42,7 +42,7 @@
         var superContainer = $(this),
             answers = [],
    			 introFob = '	<div class="intro-container slide-container"><div class="question-number">'+config.startText+'</div><a class="nav-start" href="#" data-role="button" data-inline="true" data-icon="star" data-theme="b">Start Quiz</a></div>',
-            exitFob = '<div class="results-container slide-container"><div class="question-number">' + config.endText + '</div><div class="progress-keeper"><div class="progress"></div></div><div class="result-keeper"></div></div><div class="notice">Please select an option</div>',
+            exitFob = '<div class="results-container slide-container"><div class="question-number">' + config.endText + '</div><div class="progress-keeper"><div class="progress"></div></div><div class="result-keeper"></div></div>',
             contentFob = '';
         superContainer.addClass('main-quiz-holder');
 
@@ -50,7 +50,7 @@
         {
             contentFob += '<div class="slide-container"><div class="question-number">Question ' + (questionsIteratorIndex + 1) + ' of ' + config.questions.length + '</div>';
 			contentFob += '<div class="progress-keeper"><div class="progress"></div></div>';			
-			contentFob += '<div class="question">' + config.questions[questionsIteratorIndex].question + '</div><ul class="answers">';
+			contentFob += '<div class="question">' + config.questions[questionsIteratorIndex].question + '<span class="notice"><br />* Please select an option.</span></div><ul class="answers">';
             for (answersIteratorIndex = 0; answersIteratorIndex < config.questions[questionsIteratorIndex].answers.length; answersIteratorIndex++)
             {
                 contentFob += '<li>' + config.questions[questionsIteratorIndex].answers[answersIteratorIndex] + '</li>';
@@ -69,7 +69,7 @@
             }
             else
             {
-                contentFob += '<div class="next final"><a class="nav-show-result" href="#" data-role="button" data-inline="true" data-icon="check" data-theme="b">Finish</a></div>';
+                contentFob += '<div class="next final"><a class="nav-show-result" href="#" data-role="button" data-inline="true" data-icon="arrow-r" data-iconpos="right" data-theme="b">Results</a></div>';
             }
 
             contentFob += '</div></div>';
@@ -86,8 +86,15 @@
             userAnswers = [],
             questionLength = config.questions.length,
             slidesList = superContainer.find('.slide-container');
+			navNext = superContainer.find('.nav-next'); 
 			
-			console.log('progressWidth: ' + progressWidth);
+			
+			// Hide the menu bar until quiz complete
+			$('.content-secondary').css('visibility','hidden');
+			// Hide the global nav until quiz complete
+			/*$('.ui-footer-fixed').css('visibility','hidden');
+			$('.ui-footer-fixed').css('display','none'); */ // doesn't work
+			//console.log('progressWidth: ' + progressWidth);
 
         function checkAnswers()
         {
@@ -129,20 +136,24 @@
 
         //progressKeeper.hide();
         notice.hide();
+		//navNext.hide();
         slidesList.hide().first().fadeIn(200);
-
+		
+		/* User selects an option */
         superContainer.find('li').click(function ()
         {
             var thisLi = $(this);
 
             if (thisLi.hasClass('selected'))
             {
+				// toggle selection
                 thisLi.removeClass('selected');
             }
             else
-            {
+            {	
+				/* Deselect any other list items */ 
                 thisLi.parents('.answers').children('li').removeClass('selected');
-                thisLi.addClass('selected');
+                thisLi.addClass('selected');		    
             }
         });
 		
@@ -178,7 +189,7 @@
             {
 				width: progress.width() + Math.round(progressWidth / questionLength) + '%'				
             }, 600);
-			console.log(progress.width() + Math.round(progressWidth / questionLength) + '%');			
+			//console.log(progress.width() + Math.round(progressWidth / questionLength) + '%');			
             return false;
         });
 		
@@ -249,8 +260,9 @@
             //shareButton = '<a href="http://twitter.com/share?text=' + config.twitterStatus.replace("{score}", score) + '&via=' + config.twitterUsername + '" class="share-button">Share on Twitter</a>';
 
 
-            resultSet = '<h3 class="featureBox">' + judgeSkills(score) + ' You scored ' + score + '%</h3>' + shareButton + resultSet + '<div class="jquizzy-clear"></div>';
-            superContainer.find('.result-keeper').html(resultSet).show(200);
+            resultSet = '<h3 class="featureBox">' + judgeSkills(score) + ' You scored ' + score + '%</h3><p>Touch the boxes to review answers.</p>' + shareButton + resultSet + '<div class="jquizzy-clear"></div>';
+            resultSet += '<a href="../results.html" data-role="button" data-inline="true" data-icon="grid" data-theme="b">Results</a>';
+			superContainer.find('.result-keeper').html(resultSet).show(200);
             superContainer.find('.resultsview-qhover').hide();
             superContainer.find('.result-row').hover(function ()
             {
@@ -263,6 +275,18 @@
             {
                 $(this).next().fadeIn(200);
             });
+			
+			
+			
+			// Save score
+			var topic = "Sociology";
+			var	score = score;
+			alert("saving to storage");
+			$.jStorage.set(topic,score);
+			
+			// Restore menu panel
+			$('.content-secondary').css('visibility','visible');
+						
             return false;
         });
     };

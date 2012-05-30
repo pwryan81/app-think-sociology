@@ -11,46 +11,57 @@
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/custom-scripts.js"></script>
 <script src="../assets/js/jquery.mobile.min.js"></script>
+<script src="../assets/js/jquery-json.js"></script>
+<script src="../assets/js/jstorage.js"></script>
+<script>
+var topic = "Sociology";
+var	score = 95;
+$.jStorage.set(topic,score);
+</script>
 </head>
 
 <body>
 
 <!-- Start of first page: #one -->
-<div data-role="page" id="quiz" class="type-interior"> 
+<div data-role="page" class="type-interior" > 
   <!-- Quiz JS and CSS needs to go inside  the page container.  -->
   <link rel='stylesheet' href='../assets/css/quiz-styles.css' />
   <script src='quiz-questions.js'></script> 
   <script src='../assets/js/jquery.jquizzy.js'></script>
   <div data-role="header" data-theme="b" >
     <h1> Quiz questions</h1>
-    <a href="menu.html" data-icon="arrow-l" data-direction="reverse">Menu</a> </div>
-  <!-- /header -->
+    <a href="menu.html" data-icon="arrow-l"  data-iconpos="notext" data-direction="reverse">Topic</a>
+    <div class="subheader"><a href="menu.html">Sociological Theory</a> &gt; Quiz questions</div>
+  </div>
   
+  <!-- /header --> 
   
-    <!-- Don't Fix position because it can overlay quiz questions and feedback.-->
-  <!-- Perhaps hide the footer nav in the quiz to discourage cheating. Also seems to break on iPad. -->
+  <!-- Don't Fix position because it can overlay quiz questions and feedback.--> 
+  <!-- Perhaps hide the footer nav in the quiz to discourage cheating. Also seems to break on iPad. --> 
 <!--  <div data-role="footer" data-id="myfooter" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="../index.html" data-role="button" data-icon="home">Home</a> </li>
+        <li><a href="../index.html" data-role="button" data-icon="home" data-prefetch>Home</a> </li>
         <li><a href="../glossary.html" data-role="button" data-icon="grid" data-prefetch>Glossary</a></li>
         <li><a href="../quiz-menu.html" data-role="button" data-icon="check" data-prefetch>Quiz</a></li>
       </ul>
     </div>
   </div>-->
-  <!-- /footer --> 
+  <!-- /footer -->
   
   <div data-role="content">
     <div class="content-primary">
-   
-      <div id='quiz-container'> </div>
-      <!-- give some scrolling space below -->
-    
+      <div id='quiz-container'>
+      <!-- QUIZ content holder --> 
+      <a href="../results.html" data-role="button" data-theme="b" data-icon="grid" data-iconpos="left" data-inline="true" >View all results</a>
+       </div>
+      
+      <!-- Preload the images -->
+      <div style="display:none"> <img src="../assets/images/quiz/answer.png"> <img src="../assets/images/quiz/correct.png"> <img src="../assets/images/quiz/incorrect.png"> </div>
     </div>
     <div class="content-secondary">
-      <div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="c"> 
-        <!-- <h3>More in Sociological Theory</h3> -->
-        <ul data-role="listview" data-theme="c" data-dividertheme="a">
+      <div data-role="collapsible" data-collapsed="true" data-theme="a">
+        <ul data-role="listview" data-dividertheme="c">
           <li> <a href="get-the-topic.html" data-prefetch>
             <h3>Get the topic</h3>
             </a></li>
@@ -59,12 +70,13 @@
             </a> </li>
           <li> <a href="key-terms.html" data-prefetch>
             <h3>Key terms</h3>
-          </a> </li>
+            </a> </li>
           <li> <a href="wrap-your-mind.html" data-prefetch>
             <h3>Wrap your mind</h3>
             </a> </li>
-          <li data-theme="b"> <h3>Quiz questions</h3>
-             </li>
+          <li data-theme="b">
+            <h3>Quiz questions</h3>
+          </li>
           <li data-role="list-divider">Features</li>
           <li><a href="glance.html" data-prefetch>
             <h3>At a glance</h3>
@@ -72,21 +84,19 @@
         </ul>
       </div>
     </div>
+    
     <!-- /content-secondary --> 
   </div>
   <!-- /content --> 
   
-
   <script>
  $('#quiz-container').jquizzy({
 	 		questions: init.questions, 
-			resultComments: init.resultComments,
-			twitterStatus: 'Woo! I got {score} on Sociological Theory quiz in Think Sociology Try it! http://bit.ly/linky'
+			resultComments: init.resultComments			
 		});
- </script>
+ </script> 
 </div>
-<!-- /page one --> 
-
+<!-- /page one -->
 
 </body>
 </html>

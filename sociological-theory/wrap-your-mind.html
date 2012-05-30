@@ -11,43 +11,81 @@
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/custom-scripts.js"></script>
 <script src="../assets/js/jquery.mobile.min.js"></script>
+<style>
+
+</style>
+<script>
+function moveScroller() {
+  var a = function() {
+    var b = $(window).scrollTop();
+    var d = $("#scroller-anchor").offset().top;
+    var c=$("#scroller");
+    if (b>d) {
+      c.css({position:"fixed",top:"0px"})
+    } else {
+      if (b<=d) {
+        c.css({position:"absolute",top:""})
+      }
+    }
+  };
+  $(window).scroll(a);a()
+}
+</script>
 </head>
 <body>
 <div data-role="page" class="type-interior">
   <div data-role="header" data-theme="b">
     <h1>Wrap your mind</h1>
-    <a href="menu.html" data-icon="arrow-l" data-direction="reverse">Menu</a> </div>  
+    <a href="menu.html" data-icon="arrow-l"   data-iconpos="notext" data-direction="reverse">Topic</a>
+    <div class="subheader"><a href="menu.html">Sociological Theory</a> &gt; Wrap your mind</div>
+  </div>
+  
   <!-- /header -->
   <div data-role="content">
     <div class="content-primary">
+                
+        <!--    <div id="scroller-anchor"></div> 
+            <div id="scroller" style="z-index:3; width:100%; margin-left:0; margin-right:15px;"> 
+            <h2>What causes homelessness in a society?</h2>
+            </div>   
+            <script type="text/javascript"> 
+            $(function() {
+            moveScroller();
+            });
+            </script> -->
+      
+ 
     <h2>What causes homelessness in a society?</h2>
-    <div data-role="collapsible-set" data-collapsed="true">
-      
-      <div data-role="collapsible">
-        <h3>Functionalism</h3>
-        <p>Functionalists look for the function of any issue. Food banks, functionalists argue, make a dysfunctional system such as homelessness function in a society.</p>
-        <p>Functionalists suggest society works as an interrelated system. Communitarians understand that if society is to run smoothly, the government, the local community and the business sector must all work together for the well-being of all. The root of society is the local community; it anchors this societal tree. The government carries the will of the people to the economic system, thereby functioning as the trunk of this tree. The leaves of a tree make the sugar that allows the entire plant to live. Of course, leaves without roots blow over, and roots without leaves die.</p>
+      <div data-role="collapsible-set" data-collapsed="true">
+        <div data-role="collapsible" >
+          <h3>Functionalism</h3>
+          <img src="img/wrap-f.jpg" alt="Functionalism" class="content-image">
+          <p>Functionalists look for the function of any issue. Food banks, functionalists argue, make a dysfunctional system such as homelessness function in a society.</p>
+          <p>Functionalists suggest society works as an interrelated system. Communitarians understand that if society is to run smoothly, the government, the local community and the business sector must all work together for the well-being of all. The root of society is the local community; it anchors this societal tree. The government carries the will of the people to the economic system, thereby functioning as the trunk of this tree. The leaves of a tree make the sugar that allows the entire plant to live. Of course, leaves without roots blow over, and roots without leaves die.</p>
+        </div>
+        <!-- /collapsible -->
+        
+        <div data-role="collapsible">
+          <h3>Conflict theory</h3>
+          <img src="img/wrap-c.jpg" alt="Conflict Theory" class="content-image">
+          <p>Conflict theorists would view homelessness as a sign of inequality in society. Conflict theorists focus on social classes and their drastic differences in wealth, power and prestige. They believe that the upper class controls society's wealth and resources and exploits the lower class. If the upper class shared its wealth, conflict theorists argue, then homelessness would be cut down dramatically.</p>
+        </div>
+        <!-- /collapsible -->
+        
+        <div data-role="collapsible">
+          <h3>Symbolic interactionism</h3>
+          <img src="img/wrap-s.jpg" alt="Symbolic Interactionism" class="content-image">
+          <p>Because symbolic interactionists view things on a smaller scale, they would explore how homelessness affects the way individuals act towards one another. These theorists would ask: How do individuals behave towards one another? What labels do individuals assign to homelessness? How do non-homeless people interact with homeless people?</p>
+        </div>
+        <!-- /collapsible --> 
       </div>
-      <!-- /collapsible -->
-      
-      <div data-role="collapsible">
-        <h3>Conflict theory</h3>
-        <p>Conflict theorists would view homelessness as a sign of inequality in society. Conflict theorists focus on social classes and their drastic differences in wealth, power and prestige. They believe that the upper class controls society's wealth and resources and exploits the lower class. If the upper class shared its wealth, conflict theorists argue, then homelessness would be cut down dramatically.</p>
-</div>
-      <!-- /collapsible -->
-      
-      <div data-role="collapsible">
-        <h3>Symbolic interactionism</h3>
-        <p>Because symbolic interactionists view things on a smaller scale, they would explore how homelessness affects the way individuals act towards one another. These theorists would ask: How do individuals behave towards one another? What labels do individuals assign to homelessness? How do non-homeless people interact with homeless people?</p>
-      </div>
-      <!-- /collapsible --> 
-      </div> <!-- /collapsible-set -->
+      <!-- /collapsible-set --> 
     </div>
     <!-- /content-primary -->
     <div class="content-secondary">
       <div data-role="collapsible" data-collapsed="true" data-theme="a" data-content-theme="c"> 
         <!-- <h3>More in Sociological Theory</h3> -->
-        <ul data-role="listview" data-dividertheme="a">
+        <ul data-role="listview" data-dividertheme="c">
           <li> <a href="get-the-topic.html" data-prefetch>
             <h3>Get the topic</h3>
             </a></li>
@@ -78,7 +116,7 @@
   <div data-role="footer" data-id="myfooter" data-position="fixed">
     <div data-role="navbar">
       <ul>
-        <li><a href="../index.html" data-role="button" data-icon="home">Home</a> </li>
+        <li><a href="../index.html" data-role="button" data-icon="home" data-prefetch>Home</a> </li>
         <li><a href="../glossary.html" data-role="button" data-icon="grid" data-prefetch>Glossary</a></li>
         <li><a href="../quiz-menu.html" data-role="button" data-icon="check" data-prefetch>Quiz</a></li>
       </ul>

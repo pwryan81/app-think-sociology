@@ -10,19 +10,19 @@ $(document).bind("mobileinit", function () {
     
 	
 	//AJAX related config
-	//$.mobile.pushStateEnabled = true;
+	$.mobile.pushStateEnabled = true; // when true, the quiz-question page is found without ajax. Otherwise 404.
     //$.mobile.ajaxEnabled = false;
     //$.mobile.defaultDialogTransition = 'pop';
     // $.mobile.defaultPageTransition = 'slide';  //none is best for mobile, cos transition is not too smooth.
     $.mobile.defaultPageTransition = 'none';  // Fade is best, because slide doesn't know the best direction to slide unless specified.
 
     //Set the delay for touch devices to add the hover and down classes on touch interactions for buttons throughout the framework. Reducing the delay here results in a more responsive feeling ui, but will often result in the downstate being applied during page scrolling.
-    $.mobile.buttonMarkup.hoverDelay = 0;
+    $.mobile.buttonMarkup.hoverDelay = 50;  // ms
 
     // Navigation
-    $.mobile.page.prototype.options.backBtnText = "Back";
+    $.mobile.page.prototype.options.backBtnText = "";
     $.mobile.page.prototype.options.addBackBtn = true; // Leave this as true, so it will add a back button if none is specified. Does not add button if explictly set on page header.
-    $.mobile.page.prototype.options.backBtnTheme = "a";
+    $.mobile.page.prototype.options.backBtnTheme = "b";
 
     $.mobile.loadingMessage = "Thinking..."
     $.mobile.pageLoadErrorMessage = "Oops! Page not found.";
@@ -31,22 +31,7 @@ $(document).bind("mobileinit", function () {
 	$.support.cors = true;
 	$.mobile.allowCrossDomainPages = true;
 	
-	/*
-    // Page  
-    $.mobile.page.prototype.options.headerTheme = "b";  // Page header only
-    $.mobile.page.prototype.options.contentTheme = "b";
-    $.mobile.page.prototype.options.footerTheme = "b";
 
-    // Listviews
-	$.mobile.listview.prototype.options.filterPlaceholder = "Filter list";
-    $.mobile.listview.prototype.options.headerTheme = "b";  // Header for nested lists
-    $.mobile.listview.prototype.options.theme           = "b";  // List items / content
-    $.mobile.listview.prototype.options.dividerTheme    = "b";  // List divider
-    $.mobile.listview.prototype.options.splitTheme   = "b";
-    $.mobile.listview.prototype.options.countTheme   = "b";
-    $.mobile.listview.prototype.options.filterTheme = "b";
-    $.mobile.listview.prototype.options.filterPlaceholder = "Filter data...";
-	*/
 
 
 
@@ -54,23 +39,45 @@ $(document).bind("mobileinit", function () {
 
 
 /* Glossary filtering */
-$(document).delegate("#glossary", "pageinit", function () {
+$(document).delegate("#glossary-full", "pageinit", function () {
 	//	alert('Glossary inited');
 	
-	$("select").bind("change", function (event, ui) {
-	   var filterValue = $("select option:selected").val();
+	$("#glossary-filter").bind("change", function (event, ui) {
+	   var filterValue = $("#glossary-filter").val();
 	    //alert("Filtering on " + filterValue );
-		$(".ui-input-text").val(filterValue).keyup(); //keyup to refresh filter
+		$("input.ui-input-text").val(filterValue).keyup(); //keyup to refresh filter
+    });
+	
+	
+	$("#glossary-clear").click(function (event, ui) {
+		// First, clear the dropdown
+		//$('#glossary-filter option').attr('selected', false);
+		$("#glossary-filter").val($("#glossary-filter option:first").val());
+		$('#glossary-filter').selectmenu('refresh'); //This is used to update the custom select to reflect the native select element's value
+		$("input.ui-input-text").val("").keyup(); //  clear the textboxkeyup to refresh filter
     });
 	
 });
 
+
+$(document).delegate("#glossary", "pageinit", function () {	
+	$("#select-keyterms").bind("change", function (event, ui) {
+		 	var selectValue = $("#select-keyterms").val();
+			//alert("Topic selected: " + selectValue);
+			$.mobile.changePage( selectValue );
+		
+		});
+	
+});
+
+
 $(document).bind("#quiz", "pageinit", function () {
-		alert('Quiz init');
+		/*alert('Quiz init');
 		$('#quiz-container').jquizzy({
 	 		questions: init.questions, 
 			resultComments: init.resultComments
 		});
+		*/
 	
 });	
 
@@ -81,11 +88,6 @@ $(document).bind("pageinit", function () {
     $("a[rel='top']").click(function () {
         $.mobile.silentScroll(0);
     });
-	
-	// Function to toggle all collapsible elements on the page
-	/*$("#collapsibleToggle input[type='radio']").bind("change", function (event, ui) {
-        $('#collapsibleGroup .ui-collapsible').trigger(this.value);
-    });	*/
 	
 	
 
@@ -103,6 +105,7 @@ $(document).bind("orientationchange", function () {
 /* Device Detection */
 /*
  var deviceAgent = navigator.userAgent.toLowerCase();
+ 
  var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
  if(agentID.indexOf("iphone")>=0){
   //alert("iphone");
@@ -117,3 +120,17 @@ $(document).bind("orientationchange", function () {
   //alert("android");
  }
  */
+ 
+ 
+ /* Google Analytics */ 
+ /*
+   var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31999657-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+*/

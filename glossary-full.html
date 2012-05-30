@@ -14,8 +14,8 @@
 </head>
 <body>
 <!-- Don't cache the glossary. Too big -->
-<div data-role="page" id="glossary" class="type-interior" data-add-back-btn="true">
-  <div data-role="header" data-theme="a"> 
+<div data-role="page" id="glossary-full" class="type-interior" data-add-back-btn="true">
+  <div data-role="header" data-theme="b"> 
     <!-- Add home button here because the glossary can be really long, hard to scroll down to bottom footer --> 
     <!--<a href="index.html" data-icon="home" class="ui-btn-right" data-iconpos="notext">Home</a>-->
     <h1>Glossary</h1> 
@@ -27,9 +27,9 @@
   <div data-role="content">
     <div class="content-primary" data-inset="false">
     <div data-role="controlgroup" data-type="horizontal">
-   <label for="glossary-filter">Filter glossary by: </label>&nbsp;
+   <label for="glossary-filter">Filter  by: </label>&nbsp;
     <select id="glossary-filter" name="glossary-filter" data-mini="true" class="ui-btn-right" data-theme="b">
-      <option value=''>Select a letter</option>
+      <option value='' selected>letter</option>
       <option value='[A]'>A</option>
       <option value='[B]'>B</option>
       <option value='[C]'>C</option>
@@ -59,7 +59,7 @@
     </select>
     
     
-    
+    <a href="#" data-role="button" data-theme="b" id="glossary-clear" data-mini="true">Clear</a>
    
     </div>
     <br />
