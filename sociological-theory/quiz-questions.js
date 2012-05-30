@@ -9,7 +9,7 @@
 		   "post-structuralist theory"],
 			  "correctAnswer": 1
        },
-     /*  {
+       {
            "question": "Functionalism is a theoretical framework that defines society as ___________.",
            "answers": [
 		   "manifest functions",
@@ -35,7 +35,7 @@
 		   "Integration",
 		   "Social exchange theory"],
 			  "correctAnswer": 2
-       },*/
+       },
 	   
      ],
 	  "resultComments" :  
