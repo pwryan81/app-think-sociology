@@ -6,7 +6,7 @@
   <name>Think Sociology</name>
   <description>A pocket reference for "Think Sociology", 1st edition. Published by Pearson Australia. (C) 2011-2012 </description>
   <author href="http://www.pearson.com.au"
-		email="paul.ryan@pearson.com.au">Paul Ryan</author>
+		email="">Paul Ryan</author>
   <icon src="icon.png" gap:role="default" width="57" height="57"/>
   <icon src="assets/images/icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
   <icon src="assets/images/icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
